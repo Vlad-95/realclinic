@@ -1,0 +1,24 @@
+.flex-mixin() {
+  display: flex;
+}
+
+.flex-align-center-mixin() {
+  .flex-mixin();
+  align-items: center;
+}
+
+.flex-align-start-mixin() {
+  .flex-mixin();
+  align-items: flex-start;
+}
+
+.flex-align-end-mixin() {
+  .flex-mixin();
+  align-items: flex-end;
+}
+
+.flex-column-align-start() {
+  .flex-mixin();
+  flex-direction: column;
+  align-items: flex-start;
+}

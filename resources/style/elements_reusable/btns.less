@@ -1,0 +1,19 @@
+.btn {
+  transition: 0.3s;
+  padding: 0;
+
+  &_fullround {
+    border-radius: 1000px;
+  }
+
+  &_orange {
+    color: @white;
+    background-color: @orange;
+    border: 1px solid @orange;
+
+    &:hover {
+      background-color: lighten(@orange, 10%);
+      border-color: lighten(@orange, 10%);
+    }
+  }
+}
