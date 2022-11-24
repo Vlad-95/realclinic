@@ -53,8 +53,10 @@
                 <use xlink:href="img/icons/sprite.svg#user"></use>
               </svg>
 
-              <a href="javascript:;">Войти</a>
-              <a href="javascript:;" class="uppercase">Зарегистрироваться</a>
+              <a href="javascript:;" data-target="auth">Войти</a>
+              <a href="javascript:;" data-target="auth" class="uppercase"
+                >Зарегистрироваться</a
+              >
             </div>
 
             <div class="lang">
@@ -185,7 +187,9 @@
             <span class="copyright">&#169; 2020, Register</span>
             <span
               >Если вы нашли ошибку на сайте, то
-              <a href="javascript:;">сообщите нам об этом</a>
+              <a href="javascript:;" data-target="mistake"
+                >сообщите нам об этом</a
+              >
             </span>
             <a href="javascript:;">Политика конфиденциальности</a>
             <a href="javascript:;">Пользовательское соглашение</a>
@@ -200,6 +204,215 @@
       </div>
     </footer>
 
+    <div class="modal" data-modal="feedback">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Свяжитесь с нами</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <form action="" class="form">
+              <div class="form__item">
+                <span class="name">ФИО *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Телефон</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Email *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Комментарий</span>
+                <label class="label">
+                  <textarea name="" class="textarea"></textarea>
+                </label>
+              </div>
+              <div class="form__item file">
+                <label class="label">
+                  <input type="file" name="file" id="" />
+                  <span class="text">Прикрепить файл</span>
+                </label>
+              </div>
+              <div class="form__footer">
+                <div class="form__item checkbox">
+                  <label class="label">
+                    <input type="checkbox" name="agree" id="" />
+                    <p class="text">
+                      <span
+                        >— я соглашаюсь с
+                        <a href="javascript:;"
+                          >Политикой конфиденциальности</a
+                        ></span
+                      >
+                    </p>
+                  </label>
+                </div>
+
+                <button class="btn btn_green btn_fullround form__submit">
+                  Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="mistake">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Сообщение об ошибке</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <form action="" class="form">
+              <div class="form__item">
+                <span class="name">Ссылка на страницу</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">В чем заключается ошибка *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Комментарий</span>
+                <label class="label">
+                  <textarea name="" class="textarea"></textarea>
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Ваше имя</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Телефон</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Email *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="auth">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Вход</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <div class="tabs">
+              <div class="tabs__item active">Авторизация</div>
+              <div class="tabs__item">Регистрация</div>
+            </div>
+            <!-- Авторизация -->
+            <div class="tabs-content active">
+              <form action="" class="form">
+                <div class="form__item">
+                  <span class="name">Email *</span>
+                  <label class="label">
+                    <input type="text" class="input" />
+                  </label>
+                </div>
+                <div class="form__item">
+                  <span class="name">Пароль *</span>
+                  <label class="label">
+                    <input type="password" class="input" />
+                  </label>
+                </div>
+
+                <div class="form__footer">
+                  <button class="btn btn_orange btn_fullround form__forgot">
+                    Забыли пароль
+                  </button>
+
+                  <button class="btn btn_green btn_fullround form__submit">
+                    Войти
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Регистрация -->
+            <div class="tabs-content">
+              <form action="" class="form">
+                <div class="form__item">
+                  <span class="name">Email *</span>
+                  <label class="label">
+                    <input type="text" class="input" />
+                  </label>
+                </div>
+                <div class="form__item">
+                  <span class="name">ФИО *</span>
+                  <label class="label">
+                    <input type="text" class="input" />
+                  </label>
+                </div>
+                <div class="form__item">
+                  <span class="name">Телефон</span>
+                  <label class="label">
+                    <input type="text" class="input" />
+                  </label>
+                </div>
+                <div class="form__item">
+                  <span class="name">Специальность</span>
+                  <label class="label">
+                    <input type="text" class="input" />
+                  </label>
+                </div>
+
+                <div class="form__footer">
+                  <button class="btn btn_green btn_fullround form__submit">
+                    Войти
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="/js/script.js"></script>
   </body>
 </html>
