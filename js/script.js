@@ -25,6 +25,45 @@ var mainCards = function mainCards() {
 
 /***/ }),
 
+/***/ "./resources/js/modules/menu.js":
+/*!**************************************!*\
+  !*** ./resources/js/modules/menu.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "closeMenu": () => (/* binding */ closeMenu),
+/* harmony export */   "menu": () => (/* binding */ menu),
+/* harmony export */   "menuHandler": () => (/* binding */ menuHandler)
+/* harmony export */ });
+/* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+function menuHandler() {
+  document.querySelector('.header').scrollIntoView({
+    // behavior: 'smooth',
+    block: 'start'
+  });
+  document.querySelector('body').classList.toggle('no-scroll');
+  document.querySelector('body').classList.toggle('opacity-layer');
+  document.querySelector('.burger').classList.toggle('active');
+  document.querySelector('.mmenu').classList.toggle('active');
+}
+
+function closeMenu() {
+  document.querySelector('body').classList.remove('no-scroll', 'opacity-layer');
+  document.querySelector('.burger').classList.remove('active');
+  document.querySelector('.mmenu').classList.remove('active');
+}
+
+var menu = function menu() {
+  $('.burger').on('click', menuHandler);
+};
+
+
+
+/***/ }),
+
 /***/ "./node_modules/jquery-match-height/dist/jquery.matchHeight.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/jquery-match-height/dist/jquery.matchHeight.js ***!
@@ -11391,11 +11430,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery_match_height__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery-match-height */ "./node_modules/jquery-match-height/dist/jquery.matchHeight.js");
 /* harmony import */ var jquery_match_height__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_match_height__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_main_cards__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/main-cards */ "./resources/js/modules/main-cards.js");
+/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menu */ "./resources/js/modules/menu.js");
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
 
 
 $(document).ready(function () {
   (0,_modules_main_cards__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_modules_menu__WEBPACK_IMPORTED_MODULE_2__.menu)();
 });
 })();
 
