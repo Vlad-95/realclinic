@@ -22,7 +22,6 @@
 
   .head {
     .flex-align-center-mixin();
-    flex-wrap: wrap;
     background-color: @blue;
     padding: 25px 35px 21px 40px;
 
@@ -106,6 +105,28 @@
 
     &.active {
       display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .modal {
+    .head {
+      padding: 25px 20px;
+
+      .name {
+        font-size: 24px;
+      }
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .tabs {
+      &__item {
+        font-size: 15px;
+      }
     }
   }
 }
