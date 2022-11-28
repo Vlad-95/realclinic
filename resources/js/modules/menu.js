@@ -1,18 +1,18 @@
 function menuHandler() {
-  document.querySelector('.header').scrollIntoView({
+  $('.header')[0].scrollIntoView({
     // behavior: 'smooth',
     block: 'start',
   });
-  document.querySelector('body').classList.toggle('no-scroll');
-  document.querySelector('body').classList.toggle('opacity-layer');
-  document.querySelector('.burger').classList.toggle('active');
-  document.querySelector('.mmenu').classList.toggle('active');
+  $('body').toggleClass('no-scroll');
+  $('body').toggleClass('opacity-layer');
+  $('.burger').toggleClass('active');
+  $('.mmenu').toggleClass('active');
 }
 
 function closeMenu() {
-  document.querySelector('body').classList.remove('no-scroll', 'opacity-layer');
-  document.querySelector('.burger').classList.remove('active');
-  document.querySelector('.mmenu').classList.remove('active');
+  $('body').removeClass('no-scroll opacity-layer');
+  $('.burger').removeClass('active');
+  $('.mmenu').removeClass('active');
 }
 
 const menu = () => {

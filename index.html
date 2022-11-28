@@ -329,6 +329,38 @@
       </div>
     </div>
 
+    <div class="modal" data-modal="forgot">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Забыли пароль?</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <form action="" class="form">
+              <div class="form__item">
+                <span class="name">Email *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+
+              <div class="form__footer">
+                <button class="btn btn_green btn_fullround form__submit">
+                  Сбросить пароль
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="modal" data-modal="auth">
       <div class="modal__wrap">
         <div class="container">
@@ -342,12 +374,15 @@
             </button>
           </div>
           <div class="content">
-            <div class="tabs">
-              <div class="tabs__item active">Авторизация</div>
-              <div class="tabs__item">Регистрация</div>
+            <div class="tabs js-tabs">
+              <div class="tabs__item active" data-tab="auth">Авторизация</div>
+              <div class="tabs__item" data-tab="reg">Регистрация</div>
             </div>
             <!-- Авторизация -->
-            <div class="tabs-content active">
+            <div
+              class="tabs-content js-tabs-content active"
+              data-tab-content="auth"
+            >
               <form action="" class="form">
                 <div class="form__item">
                   <span class="name">Email *</span>
@@ -363,9 +398,13 @@
                 </div>
 
                 <div class="form__footer">
-                  <button class="btn btn_orange btn_fullround form__forgot">
-                    Забыли пароль
-                  </button>
+                  <a
+                    href="javascript:;"
+                    data-target="forgot"
+                    class="form__forgot"
+                  >
+                    Забыли пароль?
+                  </a>
 
                   <button class="btn btn_green btn_fullround form__submit">
                     Войти
@@ -375,7 +414,7 @@
             </div>
 
             <!-- Регистрация -->
-            <div class="tabs-content">
+            <div class="tabs-content js-tabs-content" data-tab-content="reg">
               <form action="" class="form">
                 <div class="form__item">
                   <span class="name">Email *</span>

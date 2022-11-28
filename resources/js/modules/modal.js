@@ -1,44 +1,45 @@
-import { fadeIn, fadeOut } from './utils';
-
 const modal = () => {
   //открытие модалки
-  let modalTriggers = document.querySelectorAll('[data-target]');
+  const modalTriggers = $('[data-target]');
 
-  modalTriggers.forEach((elem) => {
-    elem.addEventListener('click', function () {
-      let target = elem.getAttribute('data-target');
+  modalTriggers.on('click', function () {
+    const target = $(this).attr('data-target');
 
-      document.querySelector('body').classList.add('no-scroll');
-      fadeIn(document.querySelector(`.modal[data-modal="${target}"]`));
-    });
+    //закрываем остальные модалки
+    const currentModal = $(`.modal[data-modal="${target}"]`);
+    const siblingsModal = $(`.modal:not([data-modal="${target}"])`);
+    siblingsModal.fadeOut();
+
+    $('body').addClass('no-scroll');
+    currentModal.fadeIn();
+
+    //проверка на существование табов в модалке
   });
 
   //закрытие модалки
-  let closeModalBtns = document.querySelectorAll('.js-modal-close');
+  const closeModalBtns = $('.js-modal-close');
 
-  closeModalBtns.forEach((elem) => {
-    elem.addEventListener('click', function () {
-      let modal = elem.closest('.modal');
+  closeModalBtns.on('click', function () {
+    const modal = $(this).closest('.modal');
 
-      document.querySelector('body').classList.remove('no-scroll');
-      fadeOut(modal);
-    });
+    $('body').removeClass('no-scroll');
+    modal.fadeOut();
   });
 
   //Клик по табам в модалке
-  let tabs = document.querySelectorAll('.modal .tabs__item');
+  // const tabs = document.querySelectorAll('.modal .tabs__item');
 
-  tabs.forEach((elem) => {
-    elem.addEventListener('click', function () {
-      const allElems = elem.parentElement.children;
+  // tabs.forEach((elem) => {
+  //   elem.addEventListener('click', function () {
+  //     const allElems = elem.parentElement.children;
 
-      [...allElems].forEach((item) => {
-        item.classList.remove('active');
-      });
+  //     [...allElems].forEach((item) => {
+  //       item.classList.remove('active');
+  //     });
 
-      elem.classList.add('active');
-    });
-  });
+  //     elem.classList.add('active');
+  //   });
+  // });
 };
 
 export default modal;
