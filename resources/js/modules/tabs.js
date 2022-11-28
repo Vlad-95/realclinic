@@ -1,13 +1,19 @@
 const tabs = () => {
-  const tabs = document.querySelectorAll('[data-tab]');
+  if ($('.js-tabs').length) {
+    const tabs = $('[data-tab]');
 
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', function () {
-      const tabName = tab.getAttribute('data-tab');
+    tabs.on('click', function () {
+      const tabName = $(this).attr('data-tab');
+      const currentTabContent = $(
+        `.js-tabs-content[data-tab-content="${tabName}"]`
+      );
+      const siblingsTabContent = currentTabContent.siblings('.js-tabs-content');
 
-      console.log(tabName);
+      $(this).addClass('active').siblings('[data-tab]').removeClass('active');
+      siblingsTabContent.removeClass('active');
+      currentTabContent.addClass('active');
     });
-  });
+  }
 };
 
 export default tabs;

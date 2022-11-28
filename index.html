@@ -53,8 +53,8 @@
                 <use xlink:href="img/icons/sprite.svg#user"></use>
               </svg>
 
-              <a href="javascript:;" data-target="auth">Войти</a>
-              <a href="javascript:;" data-target="auth" class="uppercase"
+              <a href="javascript:;" data-target="auth.signin">Войти</a>
+              <a href="javascript:;" data-target="auth.signup" class="uppercase"
                 >Зарегистрироваться</a
               >
             </div>
@@ -227,7 +227,7 @@
               <div class="form__item">
                 <span class="name">Телефон</span>
                 <label class="label">
-                  <input type="text" class="input" />
+                  <input type="text" class="input js-phone" />
                 </label>
               </div>
               <div class="form__item">
@@ -314,7 +314,7 @@
               <div class="form__item">
                 <span class="name">Телефон</span>
                 <label class="label">
-                  <input type="text" class="input" />
+                  <input type="text" class="input js-phone" />
                 </label>
               </div>
               <div class="form__item">
@@ -322,6 +322,24 @@
                 <label class="label">
                   <input type="text" class="input" />
                 </label>
+              </div>
+              <div class="form__footer">
+                <div class="form__item checkbox">
+                  <label class="label">
+                    <input type="checkbox" name="agree" id="" />
+                    <p class="text">
+                      <span
+                        >— я соглашаюсь с
+                        <a href="javascript:;"
+                          >Политикой конфиденциальности</a
+                        ></span
+                      >
+                    </p>
+                  </label>
+                </div>
+                <button class="btn btn_green btn_fullround form__submit">
+                  Отправить
+                </button>
               </div>
             </form>
           </div>
@@ -375,13 +393,13 @@
           </div>
           <div class="content">
             <div class="tabs js-tabs">
-              <div class="tabs__item active" data-tab="auth">Авторизация</div>
-              <div class="tabs__item" data-tab="reg">Регистрация</div>
+              <div class="tabs__item active" data-tab="signin">Авторизация</div>
+              <div class="tabs__item" data-tab="signup">Регистрация</div>
             </div>
             <!-- Авторизация -->
             <div
               class="tabs-content js-tabs-content active"
-              data-tab-content="auth"
+              data-tab-content="signin"
             >
               <form action="" class="form">
                 <div class="form__item">
@@ -414,7 +432,7 @@
             </div>
 
             <!-- Регистрация -->
-            <div class="tabs-content js-tabs-content" data-tab-content="reg">
+            <div class="tabs-content js-tabs-content" data-tab-content="signup">
               <form action="" class="form">
                 <div class="form__item">
                   <span class="name">Email *</span>
@@ -431,7 +449,7 @@
                 <div class="form__item">
                   <span class="name">Телефон</span>
                   <label class="label">
-                    <input type="text" class="input" />
+                    <input type="text" class="input js-phone" />
                   </label>
                 </div>
                 <div class="form__item">
@@ -442,8 +460,21 @@
                 </div>
 
                 <div class="form__footer">
+                  <div class="form__item checkbox">
+                    <label class="label">
+                      <input type="checkbox" name="agree" id="" />
+                      <p class="text">
+                        <span
+                          >— я соглашаюсь с
+                          <a href="javascript:;"
+                            >Политикой конфиденциальности</a
+                          ></span
+                        >
+                      </p>
+                    </label>
+                  </div>
                   <button class="btn btn_green btn_fullround form__submit">
-                    Войти
+                    Отправить
                   </button>
                 </div>
               </form>

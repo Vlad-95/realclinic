@@ -3,17 +3,33 @@ const modal = () => {
   const modalTriggers = $('[data-target]');
 
   modalTriggers.on('click', function () {
-    const target = $(this).attr('data-target');
+    //Разделяем по точке, чтобы учитвать модалки входа и регистрации
+    const target = $(this).attr('data-target').split('.');
 
     //закрываем остальные модалки
-    const currentModal = $(`.modal[data-modal="${target}"]`);
-    const siblingsModal = $(`.modal:not([data-modal="${target}"])`);
+    const currentModal = $(`.modal[data-modal="${target[0]}"]`);
+    const siblingsModal = currentModal.siblings('.modal');
     siblingsModal.fadeOut();
 
     $('body').addClass('no-scroll');
     currentModal.fadeIn();
 
     //проверка на существование табов в модалке
+    if (target.length > 1) {
+      const targetTab = target[1];
+
+      const currentTabContent = $(
+        `.js-tabs-content[data-tab-content="${targetTab}"]`
+      );
+      const siblingsTabContent = currentTabContent.siblings('.js-tabs-content');
+
+      $(`[data-tab=${targetTab}]`)
+        .addClass('active')
+        .siblings('[data-tab]')
+        .removeClass('active');
+      siblingsTabContent.removeClass('active');
+      currentTabContent.addClass('active');
+    }
   });
 
   //закрытие модалки
@@ -25,21 +41,6 @@ const modal = () => {
     $('body').removeClass('no-scroll');
     modal.fadeOut();
   });
-
-  //Клик по табам в модалке
-  // const tabs = document.querySelectorAll('.modal .tabs__item');
-
-  // tabs.forEach((elem) => {
-  //   elem.addEventListener('click', function () {
-  //     const allElems = elem.parentElement.children;
-
-  //     [...allElems].forEach((item) => {
-  //       item.classList.remove('active');
-  //     });
-
-  //     elem.classList.add('active');
-  //   });
-  // });
 };
 
 export default modal;

@@ -1,4 +1,5 @@
 import 'jquery-match-height';
+import 'jquery-mask-plugin';
 
 import mainCards from './modules/main-cards';
 import { menu } from './modules/menu';
