@@ -1,0 +1,130 @@
+.filter-sort {
+  .flex-align-center-mixin();
+  padding: 38px 0 24px;
+  border-bottom: 1px solid @grey;
+
+  .filter {
+    .flex-align-center-mixin();
+
+    &__item {
+      background-color: @white;
+      border: 1px solid @green;
+
+      &.all {
+        border-bottom-left-radius: 100px;
+        border-top-left-radius: 100px;
+        border-right: none;
+      }
+
+      &.no-date {
+        border-bottom-right-radius: 100px;
+        border-top-right-radius: 100px;
+        border-left: none;
+      }
+
+      &.inputs {
+        .flex-align-center-mixin();
+        padding: 9px;
+        padding-right: 19px;
+
+        .col {
+          position: relative;
+        }
+
+        .name {
+          font-size: 15px;
+          margin: 0 6px;
+        }
+
+        input {
+          border: 1px solid @green;
+          border-radius: 10px;
+          height: 30px;
+          padding: 10px;
+          padding-right: 40px;
+          width: 100%;
+          max-width: 173px;
+        }
+
+        .icon {
+          position: absolute;
+          right: 8px;
+          top: 3px;
+          width: 24px;
+          height: 24px;
+        }
+
+        .btn {
+          border-radius: 6px;
+          margin-left: 11px;
+          width: 38px;
+          height: 30px;
+        }
+      }
+
+      &.radio {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        input {
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          width: 0;
+
+          &:checked + .text {
+            background-color: @lightGreen;
+          }
+        }
+
+        .text {
+          font-size: 15px;
+          padding: 15px 19px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .sort {
+    .flex-align-center-mixin();
+    margin-left: auto;
+
+    &__item {
+      position: relative;
+      border: 1px solid @green;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:first-child {
+        border-bottom-left-radius: 100px;
+        border-top-left-radius: 100px;
+      }
+
+      &:last-child {
+        border-bottom-right-radius: 100px;
+        border-top-right-radius: 100px;
+        border-left: none;
+      }
+
+      input {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        width: 0;
+
+        &:checked + .text {
+          background-color: @lightGreen;
+        }
+      }
+
+      .text {
+        font-size: 15px;
+        background-color: @white;
+        display: block;
+        padding: 15px 23px;
+      }
+    }
+  }
+}

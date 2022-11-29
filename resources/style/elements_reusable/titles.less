@@ -1,0 +1,57 @@
+.page-title {
+  .flex-align-center-mixin();
+  padding: 32px 0;
+
+  h1 {
+    &.big {
+      font-size: 45px;
+      font-family: @cuprum;
+      font-weight: 400;
+    }
+  }
+
+  .add-patient {
+    .flex-align-center-mixin();
+    margin-left: 14px;
+    padding: 4px 19px;
+    font-size: 20px;
+    line-height: 1.5;
+
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: @white;
+      margin-left: 13px;
+    }
+  }
+
+  .links {
+    .flex-align-center-mixin();
+    margin-left: auto;
+
+    &__item {
+      .flex-align-center-mixin();
+      border: 2px solid @green;
+      background-color: @white;
+      border-radius: 1000px;
+      font-size: 15px;
+      padding: 6px 18px;
+      margin-left: 5px;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: @lightGreen;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+      }
+
+      &.active {
+        background-color: @lightGreen;
+      }
+    }
+  }
+}

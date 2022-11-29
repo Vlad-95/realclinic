@@ -1,0 +1,40 @@
+.search {
+  background-color: @lightBlue;
+  padding: 20px 0;
+
+  &__form {
+    .flex-align-center-mixin();
+    position: relative;
+
+    .input {
+      border: none;
+      background-color: @white;
+      height: 50px;
+      width: 100%;
+      padding: 20px;
+      padding-right: 70px;
+      border-radius: 1000px;
+      font-size: 17px;
+      font-weight: 400;
+    }
+
+    .submit {
+      .flex-justify-center-mixin();
+      .flex-align-center-mixin();
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      width: 60px;
+      height: 50px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: @blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realclinic</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top">
+        <div class="wrapper">
+          <div class="header__wrap">
+            <a href="javascript:;" class="logo">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="logo-text">
+              Для специалистов физической реабилитации и медицины<br />
+              электронный помощник
+            </div>
+
+            <button
+              class="btn btn_orange btn_fullround"
+              type="button"
+              data-target="feedback"
+            >
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#mail"></use>
+              </svg>
+
+              Свяжитесь с нами
+            </button>
+
+            <div class="burger"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="wrapper">
+          <div class="nav">
+            <ul class="menu">
+              <li><a href="javascript:;">Клинический осмотр</a></li>
+              <li><a href="javascript:;">Клинические исследования</a></li>
+              <li><a href="javascript:;">Клинический справочник</a></li>
+              <li><a href="javascript:;">HELP</a></li>
+            </ul>
+
+            <div class="links">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#user"></use>
+              </svg>
+
+              <a href="javascript:;" data-target="auth.signin">user@mail.com</a>
+              <a href="javascript:;" data-target="auth.signup" class="uppercase"
+                >Выйти</a
+              >
+            </div>
+
+            <div class="lang">
+              <a href="javascript:;" class="current"> Ru </a>
+              <a href="javascript:;">En</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mmenu">
+        <div class="mmenu__wrap">
+          <ul class="menu">
+            <li><a href="javascript:;">Клинический осмотр</a></li>
+            <li><a href="javascript:;">Клинические исследования</a></li>
+            <li><a href="javascript:;">Клинический справочник</a></li>
+            <li><a href="javascript:;">HELP</a></li>
+          </ul>
+
+          <div class="links">
+            <a href="javascript:;">user@mail.com</a>
+            <a href="javascript:;" class="uppercase">Выйти</a>
+          </div>
+
+          <div class="lang">
+            <a href="javascript:;" class="current"> Ru </a>
+            <a href="javascript:;">En</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="examination">
+        <div class="wrapper">
+          <div class="page-title">
+            <h1 class="big">Клинический осмотр</h1>
+
+            <button
+              type="button"
+              data-target="new-patinet"
+              class="btn btn_orange btn_fullround add-patient"
+            >
+              Добавить пациента
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#plus"></use>
+              </svg>
+            </button>
+
+            <div class="links">
+              <a href="javascript:;" class="links__item active">
+                Осмотры
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#examination"></use>
+                </svg>
+              </a>
+              <a href="javascript:;" class="links__item">
+                Шаблоны
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#template"></use>
+                </svg>
+              </a>
+              <a href="javascript:;" class="links__item">
+                Экспорт
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#export"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="search">
+          <div class="wrapper">
+            <form action="" class="search__form">
+              <input type="text" class="input" placeholder="Найти" />
+              <button class="submit">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div class="filter-sort">
+            <form action="" class="filter">
+              <label class="filter__item radio all">
+                <input type="radio" name="dates" id="" checked />
+                <span class="text">Все даты</span>
+              </label>
+              <div class="filter__item inputs period">
+                <label class="col">
+                  <span class="name">с</span>
+                  <input type="text" />
+                  <svg class="icon">
+                    <use xlink:href="img/icons/sprite.svg#calendar"></use>
+                  </svg>
+                </label>
+                <label class="col">
+                  <span class="name">по</span>
+                  <input type="text" />
+                  <svg class="icon">
+                    <use xlink:href="img/icons/sprite.svg#calendar"></use>
+                  </svg>
+                </label>
+                <button type="button" class="btn btn_green">ОК</button>
+              </div>
+              <label class="filter__item radio no-date">
+                <input type="radio" name="dates" id="" />
+                <span class="text">С неустановленной датой</span>
+              </label>
+            </form>
+
+            <form action="" class="sort">
+              <label class="sort__item">
+                <input type="checkbox" name="alphabet" id="" />
+                <span class="text">По алфавиту</span>
+              </label>
+
+              <label class="sort__item">
+                <input type="checkbox" name="days" id="" />
+                <span class="text">Дни до осмотра</span>
+              </label>
+            </form>
+          </div>
+
+          <div class="examination__list">
+            <div class="item">
+              <div class="item__head">
+                <div class="name">Алексеев А.А.</div>
+                <div class="id">ID968494040</div>
+                <div class="info">
+                  <div class="days"><span>-1</span> дней до осмотра</div>
+                  <div class="icon"></div>
+                  <a href="javascript:;" class="edit"> </a>
+                  <a href="javascript:;" class="link">Перейти к картам</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="wrapper">
+          <div class="footer__wrap">
+            <a href="javascript:;" class="logo">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="logo-text">
+              Для специалистов физической реабилитации и медицины<br />
+              электронный помощник
+            </div>
+
+            <ul class="menu">
+              <li><a href="javascript:;">Клинический осмотр</a></li>
+              <li><a href="javascript:;">Клинические исследования</a></li>
+              <li><a href="javascript:;">Клинический справочник</a></li>
+              <li><a href="javascript:;">HELP</a></li>
+              <li><a href="javascript:;">Свяжитесь с нами</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="wrapper">
+          <div class="footer__wrap">
+            <span class="copyright">&#169; 2020, Register</span>
+            <span
+              >Если вы нашли ошибку на сайте, то
+              <a href="javascript:;" data-target="mistake"
+                >сообщите нам об этом</a
+              >
+            </span>
+            <a href="javascript:;">Политика конфиденциальности</a>
+            <a href="javascript:;">Пользовательское соглашение</a>
+            <a href="javascript:;" class="siluet">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#siluet"></use>
+              </svg>
+              Создание сайта: Студия Силуэт
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" data-modal="feedback">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Свяжитесь с нами</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <form action="" class="form">
+              <div class="form__item">
+                <span class="name">ФИО *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Телефон</span>
+                <label class="label">
+                  <input type="text" class="input js-phone" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Email *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Комментарий</span>
+                <label class="label">
+                  <textarea name="" class="textarea"></textarea>
+                </label>
+              </div>
+              <div class="form__item file">
+                <label class="label">
+                  <input type="file" name="file" id="" />
+                  <span class="text">Прикрепить файл</span>
+                </label>
+              </div>
+              <div class="form__footer">
+                <div class="form__item checkbox">
+                  <label class="label">
+                    <input type="checkbox" name="agree" id="" />
+                    <p class="text">
+                      <span
+                        >— я соглашаюсь с
+                        <a href="javascript:;"
+                          >Политикой конфиденциальности</a
+                        ></span
+                      >
+                    </p>
+                  </label>
+                </div>
+
+                <button class="btn btn_green btn_fullround form__submit">
+                  Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="mistake">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Сообщение об ошибке</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <form action="" class="form">
+              <div class="form__item">
+                <span class="name">Ссылка на страницу</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">В чем заключается ошибка *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Комментарий</span>
+                <label class="label">
+                  <textarea name="" class="textarea"></textarea>
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Ваше имя</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Телефон</span>
+                <label class="label">
+                  <input type="text" class="input js-phone" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Email *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__footer">
+                <div class="form__item checkbox">
+                  <label class="label">
+                    <input type="checkbox" name="agree" id="" />
+                    <p class="text">
+                      <span
+                        >— я соглашаюсь с
+                        <a href="javascript:;"
+                          >Политикой конфиденциальности</a
+                        ></span
+                      >
+                    </p>
+                  </label>
+                </div>
+                <button class="btn btn_green btn_fullround form__submit">
+                  Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="forgot">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Забыли пароль?</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <form action="" class="form">
+              <div class="form__item">
+                <span class="name">Email *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+
+              <div class="form__footer">
+                <button class="btn btn_green btn_fullround form__submit">
+                  Сбросить пароль
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="auth">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Вход</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <div class="tabs js-tabs">
+              <div class="tabs__item active" data-tab="signin">Авторизация</div>
+              <div class="tabs__item" data-tab="signup">Регистрация</div>
+            </div>
+            <!-- Авторизация -->
+            <div
+              class="tabs-content js-tabs-content active"
+              data-tab-content="signin"
+            >
+              <form action="" class="form">
+                <div class="form__item">
+                  <span class="name">Email *</span>
+                  <label class="label">
+                    <input type="text" class="input" />
+                  </label>
+                </div>
+                <div class="form__item">
+                  <span class="name">Пароль *</span>
+                  <label class="label">
+                    <input type="password" class="input" />
+                  </label>
+                </div>
+
+                <div class="form__footer">
+                  <a
+                    href="javascript:;"
+                    data-target="forgot"
+                    class="form__forgot"
+                  >
+                    Забыли пароль?
+                  </a>
+
+                  <button class="btn btn_green btn_fullround form__submit">
+                    Войти
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Регистрация -->
+            <div class="tabs-content js-tabs-content" data-tab-content="signup">
+              <form action="" class="form">
+                <div class="form__item">
+                  <span class="name">Email *</span>
+                  <label class="label">
+                    <input type="text" class="input" />
+                  </label>
+                </div>
+                <div class="form__item">
+                  <span class="name">ФИО *</span>
+                  <label class="label">
+                    <input type="text" class="input" />
+                  </label>
+                </div>
+                <div class="form__item">
+                  <span class="name">Телефон</span>
+                  <label class="label">
+                    <input type="text" class="input js-phone" />
+                  </label>
+                </div>
+                <div class="form__item">
+                  <span class="name">Специальность</span>
+                  <label class="label">
+                    <input type="text" class="input" />
+                  </label>
+                </div>
+
+                <div class="form__footer">
+                  <div class="form__item checkbox">
+                    <label class="label">
+                      <input type="checkbox" name="agree" id="" />
+                      <p class="text">
+                        <span
+                          >— я соглашаюсь с
+                          <a href="javascript:;"
+                            >Политикой конфиденциальности</a
+                          ></span
+                        >
+                      </p>
+                    </label>
+                  </div>
+                  <button class="btn btn_green btn_fullround form__submit">
+                    Отправить
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
