@@ -6,6 +6,7 @@ import { menu } from './modules/menu';
 import form from './modules/form';
 import modal from './modules/modal';
 import tabs from './modules/tabs';
+import accordion from './modules/accordion';
 
 $(document).ready(function () {
   mainCards();
@@ -13,4 +14,5 @@ $(document).ready(function () {
   form();
   modal();
   tabs();
+  accordion();
 });

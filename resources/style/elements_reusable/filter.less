@@ -44,6 +44,7 @@
           padding-right: 40px;
           width: 100%;
           max-width: 173px;
+          font-size: 15px;
         }
 
         .icon {
@@ -125,6 +126,70 @@
         display: block;
         padding: 15px 23px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .filter-sort {
+    .filter {
+      &__item {
+        &.inputs {
+          padding-right: 15px;
+
+          .name {
+            font-size: 12px;
+          }
+
+          input {
+            font-size: 12px;
+            height: 26px;
+            border-radius: 6px;
+            max-width: 110px;
+          }
+
+          .icon {
+            width: 20px;
+            height: 20px;
+          }
+
+          .btn {
+            height: 26px;
+            line-height: 1;
+            font-size: 12px;
+          }
+        }
+        &.radio {
+          .text {
+            font-size: 12px;
+            padding: 15px;
+          }
+        }
+      }
+    }
+
+    .sort {
+      &__item {
+        .text {
+          font-size: 12px;
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .filter-sort {
+    .flex-column-align-start();
+    flex-wrap: wrap;
+
+    .filter {
+      margin-bottom: 20px;
+    }
+
+    .sort {
+      margin-left: 0;
     }
   }
 }

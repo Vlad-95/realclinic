@@ -55,3 +55,73 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .page-title {
+    h1 {
+      &.big {
+        font-size: 30px;
+      }
+    }
+
+    .add-patient {
+      font-size: 15px;
+      padding: 4px;
+      padding-left: 13px;
+    }
+
+    .links {
+      &__item {
+        font-size: 12px;
+        padding: 4px 10px;
+
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .page-title {
+    flex-wrap: wrap;
+
+    .add-patient {
+      margin-left: auto;
+    }
+
+    .links {
+      width: 100%;
+      margin-top: 20px;
+      margin-left: 0;
+
+      &__item {
+        margin-left: 0;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-title {
+    h1 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .add-patient {
+      margin-left: 0;
+    }
+
+    .links {
+      flex-wrap: wrap;
+
+      &__item {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
