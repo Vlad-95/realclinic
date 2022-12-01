@@ -146,6 +146,7 @@
             height: 26px;
             border-radius: 6px;
             max-width: 110px;
+            padding-right: 30px;
           }
 
           .icon {
@@ -197,6 +198,85 @@
 @media screen and (max-width: 768px) {
   .filter-sort {
     .filter {
+      width: 100%;
+      border-bottom: 1px dashed @lightGreen;
+      padding-bottom: 10px;
+      flex-wrap: wrap;
+      &__item {
+        margin: 0 10px 10px 0;
+
+        &.all {
+          border-radius: 100px;
+          border: 1px solid @green;
+        }
+
+        &.no-date {
+          border-radius: 100px;
+          border: 1px solid @green;
+        }
+
+        &.period {
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .filter-sort {
+    .filter {
+      &__item {
+        &.all {
+          order: 1;
+        }
+
+        &.no-date {
+          order: 2;
+        }
+
+        &.period {
+          order: 3;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .filter-sort {
+    .filter {
+      &__item {
+        &.period {
+          border-radius: 10px;
+          width: 100%;
+          margin-right: 0;
+        }
+
+        &.inputs {
+          .flex-column-align-start();
+          padding: 9px;
+
+          .col {
+            margin-bottom: 10px;
+            width: 100%;
+          }
+
+          .name {
+            width: 14px;
+            display: inline-block;
+          }
+
+          input {
+            max-width: calc(100% - 30px);
+          }
+
+          .btn {
+            margin-left: auto;
+          }
+        }
+      }
     }
   }
 }

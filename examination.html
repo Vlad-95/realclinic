@@ -197,17 +197,19 @@
                       <use xlink:href="img/icons/sprite.svg#exam-warning"></use>
                     </svg>
                   </div>
-                  <a href="javascript:;" class="edit">
-                    <svg>
-                      <use xlink:href="img/icons/sprite.svg#edit"></use>
-                    </svg>
-                  </a>
-                  <a href="javascript:;" class="link"
-                    >Перейти к картам
-                    <svg>
-                      <use xlink:href="img/icons/sprite.svg#exam-card"></use>
-                    </svg>
-                  </a>
+                  <div class="btns">
+                    <a href="javascript:;" class="edit">
+                      <svg>
+                        <use xlink:href="img/icons/sprite.svg#edit"></use>
+                      </svg>
+                    </a>
+                    <a href="javascript:;" class="link"
+                      >Перейти к картам
+                      <svg>
+                        <use xlink:href="img/icons/sprite.svg#exam-card"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="item__content js-accordion-content">
@@ -239,17 +241,19 @@
                       <use xlink:href="img/icons/sprite.svg#exam-time"></use>
                     </svg>
                   </div>
-                  <a href="javascript:;" class="edit">
-                    <svg>
-                      <use xlink:href="img/icons/sprite.svg#edit"></use>
-                    </svg>
-                  </a>
-                  <a href="javascript:;" class="link"
-                    >Перейти к картам
-                    <svg>
-                      <use xlink:href="img/icons/sprite.svg#exam-card"></use>
-                    </svg>
-                  </a>
+                  <div class="btns">
+                    <a href="javascript:;" class="edit">
+                      <svg>
+                        <use xlink:href="img/icons/sprite.svg#edit"></use>
+                      </svg>
+                    </a>
+                    <a href="javascript:;" class="link"
+                      >Перейти к картам
+                      <svg>
+                        <use xlink:href="img/icons/sprite.svg#exam-card"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="item__content js-accordion-content">
@@ -280,18 +284,32 @@
                     <svg>
                       <use xlink:href="img/icons/sprite.svg#exam-close"></use>
                     </svg>
+
+                    <div class="popup">
+                      <div class="name">Не вызывать на осмотр</div>
+                      <p>
+                        Справа от каждого пациента выводится количество дней до
+                        повторного осмотра. Также выводится иконка,
+                        информирующая о том, что пациента больше не нужно
+                        вызывать на контрольные осмотры. При наведении на иконку
+                        выводится информация, описанная в поле «Комментарий» в
+                        п.5.3.2.
+                      </p>
+                    </div>
                   </div>
-                  <a href="javascript:;" class="edit">
-                    <svg>
-                      <use xlink:href="img/icons/sprite.svg#edit"></use>
-                    </svg>
-                  </a>
-                  <a href="javascript:;" class="link"
-                    >Перейти к картам
-                    <svg>
-                      <use xlink:href="img/icons/sprite.svg#exam-card"></use>
-                    </svg>
-                  </a>
+                  <div class="btns">
+                    <a href="javascript:;" class="edit">
+                      <svg>
+                        <use xlink:href="img/icons/sprite.svg#edit"></use>
+                      </svg>
+                    </a>
+                    <a href="javascript:;" class="link"
+                      >Перейти к картам
+                      <svg>
+                        <use xlink:href="img/icons/sprite.svg#exam-card"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="item__content js-accordion-content">
@@ -325,17 +343,19 @@
                       ></use>
                     </svg>
                   </div>
-                  <a href="javascript:;" class="edit">
-                    <svg>
-                      <use xlink:href="img/icons/sprite.svg#edit"></use>
-                    </svg>
-                  </a>
-                  <a href="javascript:;" class="link"
-                    >Перейти к картам
-                    <svg>
-                      <use xlink:href="img/icons/sprite.svg#exam-card"></use>
-                    </svg>
-                  </a>
+                  <div class="btns">
+                    <a href="javascript:;" class="edit">
+                      <svg>
+                        <use xlink:href="img/icons/sprite.svg#edit"></use>
+                      </svg>
+                    </a>
+                    <a href="javascript:;" class="link"
+                      >Перейти к картам
+                      <svg>
+                        <use xlink:href="img/icons/sprite.svg#exam-card"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="item__content js-accordion-content">
@@ -685,6 +705,118 @@
         </div>
       </div>
     </div>
+
+    <div class="modal" data-modal="new-patinet">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Новый пациент</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <div class="attention">
+              <div class="name">Обязательно к прочтению</div>
+              <p>Регистр не хранит персональных данных</p>
+              <p>
+                <span>Вариант 1:</span> Для идентификации пациента вводим номер
+                истории в Вашей МИС или любую другую цифру, по которой Вы
+                сможете установить связь клинических данных регистра с
+                персональными данными Вашего источника.
+              </p>
+              <p>
+                <span>Вариант 2:</span> Вводим фамилию и инициалы (без указания
+                точной даты рождения, полного имени и отчества)
+              </p>
+            </div>
+            <form action="" class="form">
+              <div class="form__item row">
+                <span class="name">Фамилия *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item row">
+                <span class="name">Имя *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                  <span class="descr"
+                    >Можно ввести только инициалы, точка будет проставлена
+                    автоматически</span
+                  >
+                </label>
+              </div>
+              <div class="form__item row">
+                <span class="name">Отчество *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                  <span class="descr"
+                    >Можно ввести только инициалы, точка будет проставлена
+                    автоматически</span
+                  >
+                </label>
+              </div>
+
+              <div class="form__item row short">
+                <span class="name">Возраст *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+
+              <div class="form__item row radio">
+                <span class="name">Пол *</span>
+                <div class="radio-row">
+                  <label class="label">
+                    <input type="radio" name="gender" id="" />
+                    <span class="text">Мужской</span>
+                  </label>
+
+                  <label class="label">
+                    <input type="radio" name="gender" id="" />
+                    <span class="text">Женский</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form__item row">
+                <span class="name">ID *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                  <span class="descr"
+                    >Если Вы не заполните данное поле, то система автоматически
+                    присвоит идентификационный номер Вашему пациенту</span
+                  >
+                </label>
+              </div>
+
+              <div class="form__item row">
+                <span class="name">Профессия</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+
+              <div class="form__footer">
+                <button class="btn btn_orange btn_fullround">Сохранить</button>
+
+                <button
+                  type="button"
+                  class="btn btn_green btn_fullround js-modal-close"
+                >
+                  Отмена
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="/js/script.js"></script>
   </body>
 </html>

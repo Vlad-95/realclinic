@@ -2,16 +2,48 @@
   &__item {
     margin-bottom: 15px;
 
+    &.row {
+      .flex-align-start-mixin();
+      margin-bottom: 10px;
+
+      .name {
+        width: 150px;
+        min-width: 150px;
+      }
+
+      .label {
+        width: 100%;
+      }
+
+      &.short {
+        .label {
+          max-width: 190px;
+        }
+      }
+
+      &.radio {
+        width: 100%;
+      }
+    }
+
     .name {
       font-size: 15px;
       line-height: 1.2;
       color: @grey;
       display: block;
       margin-bottom: 7px;
+      margin-top: 12px;
     }
 
     .label {
       cursor: pointer;
+    }
+
+    .descr {
+      font-size: 12px;
+      color: @grey;
+      margin-top: 8px;
+      display: inline-block;
     }
 
     .input {
@@ -114,6 +146,67 @@
         }
       }
     }
+
+    &.radio {
+      .radio-row {
+        .flex-align-center-mixin();
+        flex-wrap: wrap;
+
+        .label {
+          width: auto;
+          margin: 10px 30px 0 0;
+        }
+      }
+
+      .label {
+        position: relative;
+
+        input {
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          width: 0;
+
+          &:checked + .text {
+            &:after {
+              opacity: 1;
+            }
+          }
+        }
+
+        .text {
+          position: relative;
+          font-size: 13px;
+          font-weight: 700;
+          padding-left: 33px;
+          padding-top: 4px;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            border: 1px solid #bdbdbd;
+            border-radius: 100px;
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            transition: 0.3s;
+            opacity: 0;
+            left: 7px;
+            top: 7px;
+            width: 10px;
+            height: 10px;
+            border-radius: 100px;
+            background-color: @blue;
+          }
+        }
+      }
+    }
   }
 
   &__forgot {
@@ -121,8 +214,6 @@
   }
 
   &__submit {
-    font-weight: 500;
-    padding: 12px 18px;
     margin-left: auto;
   }
 
@@ -132,6 +223,11 @@
     margin-top: 24px;
     border-top: 2px dotted @grey;
     padding: 20px 0;
+
+    button {
+      font-weight: 500;
+      padding: 12px 18px;
+    }
   }
 }
 
@@ -173,6 +269,19 @@
 
     &__submit {
       font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .form {
+    &__item {
+      &.row {
+        .name {
+          width: 100px;
+          min-width: 100px;
+        }
+      }
     }
   }
 }

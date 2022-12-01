@@ -52,6 +52,49 @@
           border: 2px solid #bdbdbd;
           border-radius: 1000px;
           margin-left: 23px;
+          position: relative;
+
+          &:hover {
+            .popup {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+
+          .popup {
+            position: absolute;
+            right: -20px;
+            bottom: 45px;
+            background-color: @white;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            width: 700px;
+            padding: 40px;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+
+            &:after {
+              content: '';
+              position: absolute;
+              right: 16px;
+              bottom: -40px;
+              border: 20px solid transparent;
+              border-top: 20px solid @white;
+            }
+
+            .name {
+              font-size: 16px;
+              font-weight: 700;
+              width: 100%;
+              margin: 0;
+            }
+
+            p {
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 2;
+            }
+          }
 
           &.orange {
             border-color: @orange;
@@ -61,6 +104,10 @@
             width: 24px;
             height: 24px;
           }
+        }
+
+        .btns {
+          .flex-align-center-mixin();
         }
 
         .edit {
@@ -146,8 +193,176 @@
             }
           }
 
+          .icon {
+            .popup {
+              padding: 30px;
+
+              .name {
+                font-size: 15px;
+              }
+
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+
           .link {
             font-size: 12px;
+          }
+        }
+
+        &__content {
+          .key {
+            font-size: 12px;
+          }
+
+          .value {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .examination {
+    &__list {
+      .item {
+        &__head {
+          .name {
+            width: 25%;
+          }
+
+          .icon {
+            .popup {
+              width: 400px;
+            }
+          }
+        }
+
+        &__content {
+          .key {
+            width: 25%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .examination {
+    &__list {
+      .item {
+        &__head {
+          .flex-align-start-mixin();
+          flex-wrap: wrap;
+
+          .info {
+            .flex-justify-end-mixin();
+            flex-wrap: wrap;
+            width: 50%;
+          }
+
+          .name {
+            margin-top: 12px;
+          }
+
+          .id {
+            margin-top: 12px;
+          }
+
+          .btns {
+            .flex-justify-end-mixin();
+            width: 100%;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .examination {
+    &__list {
+      .item {
+        &__head {
+          .info {
+            width: 100%;
+            margin-top: 10px;
+            padding-left: 0;
+          }
+
+          .name {
+            width: 50%;
+          }
+
+          .id {
+            width: 50%;
+            text-align: right;
+          }
+
+          .days {
+            order: 2;
+          }
+
+          .icon {
+            order: 3;
+            margin-left: 10px;
+
+            .popup {
+              width: 300px;
+              right: -10px;
+
+              &:after {
+                right: 6px;
+              }
+            }
+          }
+
+          .btns {
+            margin-top: 0;
+            width: auto;
+            order: 1;
+            margin-left: 0;
+            margin-right: auto;
+          }
+
+          .edit {
+            margin-left: 0;
+          }
+        }
+
+        &__content {
+          .key {
+            min-width: 140px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .examination {
+    &__list {
+      .item {
+        &__head {
+          .days {
+            order: 1;
+          }
+
+          .icon {
+            order: 2;
+          }
+
+          .btns {
+            width: 100%;
+            order: 3;
+            margin-top: 10px;
           }
         }
       }
