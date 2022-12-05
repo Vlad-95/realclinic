@@ -24,7 +24,8 @@ var accordion = function accordion() {
   var toggle = $('.js-accordion-toggle');
   toggle.on('click', function () {
     var parent = $(this).closest('.js-accordion-item');
-    var content = parent.find('.js-accordion-content');
+    var content = parent.find('.js-accordion-content').first();
+    $(this).toggleClass('active');
     content.slideToggle();
   });
 };

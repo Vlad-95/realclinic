@@ -1,0 +1,682 @@
+.examination {
+  &__patient {
+    padding-bottom: 60px;
+
+    .block {
+      padding: 37px 0 45px;
+
+      &__head {
+        .flex-align-center-mixin();
+        margin-bottom: 18px;
+
+        .name {
+          font-family: @cuprum;
+          font-size: 25px;
+          margin-right: 20px;
+        }
+
+        .icons {
+          .flex-align-center-mixin();
+          margin-left: auto;
+
+          .edit {
+            .flex-align-center-mixin();
+            .flex-justify-center-mixin();
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            border: 2px solid;
+            margin-right: 5px;
+
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+
+          .toggle {
+            .flex-align-center-mixin();
+            .flex-justify-center-mixin();
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            border: 2px solid;
+            cursor: pointer;
+            transition: 0.3s;
+            transform: rotate(0);
+
+            &.active {
+              transform: rotate(180deg);
+            }
+
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+
+      &__content {
+        .info {
+          .row {
+            .flex-align-center-mixin();
+
+            &:nth-of-type(odd) {
+              background-color: fade(@lightGreen, 50%);
+            }
+          }
+
+          .key {
+            font-size: 15px;
+            width: 43%;
+            padding: 11px;
+            padding-right: 15px;
+          }
+
+          .value {
+            font-size: 15px;
+            padding: 11px;
+            padding-left: 0;
+          }
+        }
+
+        .exam {
+          .flex-align-center-mixin();
+
+          .title {
+            font-size: 15px;
+            margin-right: 20px;
+            width: 41%;
+          }
+
+          &__item {
+            .flex-align-center-mixin();
+            margin-right: 20px;
+            position: relative;
+
+            .name {
+              font-size: 15px;
+              margin-right: 11px;
+            }
+
+            input {
+              border: 1px solid @green;
+              border-radius: 10px;
+              width: 100%;
+              max-width: 140px;
+              font-size: 13px;
+              padding: 10px;
+            }
+
+            .icon {
+              width: 24px;
+              height: 24px;
+              position: absolute;
+              right: 4px;
+              top: 6px;
+              stroke: @green;
+            }
+          }
+
+          &__check {
+            position: relative;
+            margin-right: 28px;
+            margin-left: auto;
+
+            input {
+              opacity: 0;
+              visibility: hidden;
+              width: 0;
+              position: absolute;
+
+              &:checked + .text:after {
+                opacity: 1;
+              }
+            }
+
+            .text {
+              position: relative;
+              padding-right: 32px;
+              font-size: 15px;
+
+              &:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: -4px;
+                width: 24px;
+                height: 24px;
+                border: 1px solid @green;
+                border-radius: 6px;
+              }
+
+              &:after {
+                content: '';
+                position: absolute;
+                transition: 0.3s;
+                opacity: 0;
+                right: 6px;
+                top: 4px;
+                width: 13px;
+                height: 9px;
+                background-image: url("data:image/svg+xml,%3Csvg width='13' height='9' viewBox='0 0 13 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.00019 8.99994C4.86858 9.0007 4.73812 8.97548 4.61628 8.92571C4.49444 8.87595 4.38363 8.80262 4.29019 8.70994L1.29019 5.70994C1.19695 5.6167 1.12299 5.50601 1.07253 5.38419C1.02207 5.26237 0.996094 5.1318 0.996094 4.99994C0.996094 4.73364 1.10188 4.47825 1.29019 4.28994C1.47849 4.10164 1.73388 3.99585 2.00019 3.99585C2.26649 3.99585 2.52188 4.10164 2.71019 4.28994L5.00019 6.58994L10.2902 1.28994C10.4785 1.10164 10.7339 0.99585 11.0002 0.99585C11.2665 0.99585 11.5219 1.10164 11.7102 1.28994C11.8985 1.47825 12.0043 1.73364 12.0043 1.99994C12.0043 2.26624 11.8985 2.52164 11.7102 2.70994L5.71019 8.70994C5.61675 8.80262 5.50593 8.87595 5.38409 8.92571C5.26225 8.97548 5.13179 9.0007 5.00019 8.99994Z' fill='%235B5B5B'/%3E%3C/svg%3E%0A");
+              }
+            }
+          }
+
+          .btn {
+            border-radius: 6px;
+            text-transform: uppercase;
+            width: 37px;
+            height: 30px;
+          }
+        }
+
+        .cards {
+          .item {
+            &:not(:last-of-type) {
+              border-bottom: 1px dashed @blue;
+            }
+
+            &__head {
+              .flex-align-center-mixin();
+              padding-top: 20px;
+              padding-bottom: 22px;
+              padding-right: 9px;
+
+              .name {
+                .flex-align-center-mixin();
+                font-size: 15px;
+
+                .date {
+                  position: relative;
+                  display: inline-block;
+
+                  &:after {
+                    content: '|';
+                    display: inline-block;
+                    margin: 0 12px;
+                  }
+                }
+              }
+
+              .toggle {
+                .flex-align-center-mixin();
+                .flex-justify-center-mixin();
+                width: 22px;
+                height: 22px;
+                cursor: pointer;
+                border-radius: 100px;
+                border: 2px solid @blue;
+                margin-left: auto;
+                transform: rotate(180deg);
+                transition: 0.3s;
+
+                &.active {
+                  transform: rotate(0);
+                }
+
+                svg {
+                  width: 22px;
+                  height: 22px;
+                  fill: @blue;
+                }
+              }
+            }
+
+            &__content {
+              padding: 24px 0;
+              display: none;
+              border-top: 1px dashed @blue;
+
+              .elem {
+                .flex-align-center-mixin();
+                padding: 12px 0;
+                padding-right: 9px;
+                position: relative;
+
+                &:not(:last-of-type) {
+                  border-bottom: 1px dashed @lightBlue;
+                }
+
+                &:before {
+                  content: '';
+                  position: absolute;
+                  width: 4px;
+                  height: 4px;
+                  background-color: @grey;
+                  border-radius: 100px;
+                  top: 20px;
+                  left: 30px;
+                }
+
+                .name {
+                  .flex-align-center-mixin();
+                  font-size: 15px;
+                  margin-left: 43px;
+
+                  .date {
+                    position: relative;
+                    display: inline-block;
+
+                    &:after {
+                      content: '|';
+                      display: inline-block;
+                      margin: 0 12px;
+                    }
+                  }
+                }
+
+                .link {
+                  .flex-align-center-mixin();
+                  .flex-justify-center-mixin();
+                  margin-left: auto;
+                  width: 22px;
+                  height: 22px;
+
+                  svg {
+                    width: 22px;
+                    height: 22px;
+                    fill: @blue;
+                  }
+
+                  &.new {
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 100px;
+                    border: 2px solid @blue;
+                    margin-left: auto;
+                    transform: rotate(180deg);
+                    transition: 0.3s;
+
+                    svg {
+                      width: 22px;
+                      height: 22px;
+                      fill: @blue;
+                      transform: scale(1.5);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .research {
+          .item {
+            .flex-align-center-mixin();
+            padding-left: 10px;
+
+            &:nth-of-type(odd) {
+              background-color: fade(@lightBlue, 20%);
+            }
+
+            .name {
+              font-size: 15px;
+            }
+
+            .link {
+              .flex-align-center-mixin();
+              .flex-justify-center-mixin();
+              margin-left: auto;
+              width: 40px;
+              height: 40px;
+
+              svg {
+                width: 22px;
+                height: 22px;
+                fill: @blue;
+              }
+            }
+          }
+        }
+      }
+
+      &[data-block='info'] {
+        background-color: fade(@lightGreen, 20%);
+
+        .block__head {
+          .icons {
+            .edit,
+            .toggle {
+              border-color: @green;
+              background-color: @white;
+
+              svg {
+                fill: @green;
+              }
+            }
+          }
+        }
+      }
+
+      &[data-block='examination'] {
+        .block__head {
+          .name {
+            width: 41%;
+          }
+
+          .status {
+            .flex-align-center-mixin();
+            margin-right: 20px;
+            line-height: 1;
+            font-size: 15px;
+
+            svg {
+              width: 24px;
+              height: 24px;
+              margin-left: 9px;
+            }
+          }
+
+          .repeat-check {
+            position: relative;
+            cursor: pointer;
+            margin-left: auto;
+
+            input {
+              opacity: 0;
+              visibility: hidden;
+              width: 0;
+              position: absolute;
+
+              &:checked + .text:after {
+                opacity: 1;
+              }
+            }
+
+            .text {
+              position: relative;
+              padding-right: 32px;
+              font-size: 15px;
+
+              &:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: -4px;
+                width: 24px;
+                height: 24px;
+                border: 1px solid @green;
+                border-radius: 6px;
+              }
+
+              &:after {
+                content: '';
+                position: absolute;
+                transition: 0.3s;
+                opacity: 0;
+                right: 6px;
+                top: 4px;
+                width: 13px;
+                height: 9px;
+                background-image: url("data:image/svg+xml,%3Csvg width='13' height='9' viewBox='0 0 13 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.00019 8.99994C4.86858 9.0007 4.73812 8.97548 4.61628 8.92571C4.49444 8.87595 4.38363 8.80262 4.29019 8.70994L1.29019 5.70994C1.19695 5.6167 1.12299 5.50601 1.07253 5.38419C1.02207 5.26237 0.996094 5.1318 0.996094 4.99994C0.996094 4.73364 1.10188 4.47825 1.29019 4.28994C1.47849 4.10164 1.73388 3.99585 2.00019 3.99585C2.26649 3.99585 2.52188 4.10164 2.71019 4.28994L5.00019 6.58994L10.2902 1.28994C10.4785 1.10164 10.7339 0.99585 11.0002 0.99585C11.2665 0.99585 11.5219 1.10164 11.7102 1.28994C11.8985 1.47825 12.0043 1.73364 12.0043 1.99994C12.0043 2.26624 11.8985 2.52164 11.7102 2.70994L5.71019 8.70994C5.61675 8.80262 5.50593 8.87595 5.38409 8.92571C5.26225 8.97548 5.13179 9.0007 5.00019 8.99994Z' fill='%235B5B5B'/%3E%3C/svg%3E%0A");
+              }
+            }
+          }
+          .icons {
+            margin-left: 25px;
+
+            .toggle {
+              border-color: @green;
+              background-color: @white;
+
+              svg {
+                fill: @green;
+              }
+            }
+          }
+        }
+
+        .block__content {
+          border-top: 1px dashed @mdGrey;
+          padding-top: 21px;
+        }
+      }
+
+      &[data-block='cards'] {
+        background-color: fade(@lightBlue, 10%);
+
+        .block__head {
+          .icons {
+            .toggle {
+              border-color: @blue;
+              background-color: @white;
+
+              svg {
+                fill: @blue;
+              }
+            }
+          }
+        }
+      }
+
+      &[data-block='research'] {
+        .block__head {
+          padding-bottom: 20px;
+
+          .icons {
+            .toggle {
+              border-color: #f2f2f2;
+              background-color: #f2f2f2;
+
+              svg {
+                fill: @grey;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .examination {
+    &__patient {
+      .block {
+        &__content {
+          .info {
+            .key {
+              font-size: 12px;
+            }
+
+            .value {
+              font-size: 12px;
+            }
+          }
+
+          .exam {
+            .title {
+              font-size: 12px;
+            }
+
+            &__item {
+              .name {
+                font-size: 12px;
+              }
+
+              input {
+                font-size: 12px;
+              }
+            }
+
+            &__check {
+              .text {
+                font-size: 12px;
+              }
+            }
+
+            .btn {
+              font-size: 12px;
+            }
+          }
+
+          .cards {
+            .item {
+              &__head {
+                .name {
+                  font-size: 12px;
+                }
+              }
+
+              &__content {
+                .elem {
+                  .name {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+
+          .research {
+            .item {
+              .name {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+
+        &[data-block='examination'] {
+          .block__head {
+            .status {
+              font-size: 12px;
+            }
+
+            .repeat-check {
+              .text {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .examination {
+    &__patient {
+      .block {
+        &__head {
+          .name {
+            font-size: 20px;
+          }
+        }
+
+        &__content {
+          .info {
+            .key {
+              width: 25%;
+            }
+          }
+
+          .exam {
+            .title {
+              width: auto;
+            }
+          }
+
+          .cards {
+            .item {
+              &__content {
+                .elem {
+                  &:before {
+                    left: 5px;
+                  }
+
+                  .name {
+                    margin-left: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &[data-block='examination'] {
+          .block__head {
+            flex-wrap: wrap;
+
+            .name {
+              order: 1;
+              width: calc(100% - 60px);
+            }
+
+            .status {
+              order: 3;
+              width: 100%;
+            }
+
+            .repeat-check {
+              order: 4;
+              margin-left: 0;
+            }
+
+            .icons {
+              order: 2;
+              margin-left: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .examination {
+    &__patient {
+      .block {
+        &__content {
+          .exam {
+            flex-wrap: wrap;
+
+            .title {
+              width: 100%;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .examination {
+    &__patient {
+      .block {
+        &__content {
+          .info {
+            .key {
+              min-width: 140px;
+            }
+          }
+
+          .exam {
+            .flex-column-align-start();
+
+            .title {
+              width: 100%;
+              margin-bottom: 10px;
+            }
+
+            &__item {
+              margin-bottom: 10px;
+            }
+
+            &__check {
+              margin-left: 0;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
