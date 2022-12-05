@@ -1,0 +1,22 @@
+.wysiwyg {
+  & > *:first-child {
+    margin-top: 0 !important;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 2;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .wysiwyg {
+    p {
+      font-size: 12px;
+    }
+  }
+}
