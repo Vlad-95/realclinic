@@ -95,7 +95,7 @@
             <h1 class="big">Клинические исследования</h1>
             <button
               type="button"
-              data-target="new-templ"
+              data-target="new-research"
               class="btn btn_orange btn_fullround add-research"
             >
               Добавить исследование
@@ -123,7 +123,7 @@
             <div class="item">
               <div class="name">
                 <div class="date">29.11.21</div>
-                Исследование 23-98 М-Ж Рука
+                <a href="javascript:;">Исследование 23-98 М-Ж Рука</a>
               </div>
 
               <div class="icons">
@@ -134,7 +134,11 @@
                     <use xlink:href="img/icons/sprite.svg#share"></use>
                   </svg>
                 </a>
-                <a href="javascript:;" class="delete">
+                <a
+                  href="javascript:;"
+                  data-target="delete-research"
+                  class="delete"
+                >
                   <svg>
                     <use xlink:href="img/icons/sprite.svg#plus"></use>
                   </svg>
@@ -145,7 +149,7 @@
             <div class="item">
               <div class="name">
                 <div class="date">29.11.21</div>
-                Исследование 23-98 М-Ж Рука
+                <a href="javascript:;">Исследование 23-98 М-Ж Рука</a>
               </div>
 
               <div class="icons">
@@ -156,7 +160,11 @@
                     <use xlink:href="img/icons/sprite.svg#share"></use>
                   </svg>
                 </a>
-                <a href="javascript:;" class="delete">
+                <a
+                  href="javascript:;"
+                  data-target="delete-research"
+                  class="delete"
+                >
                   <svg>
                     <use xlink:href="img/icons/sprite.svg#plus"></use>
                   </svg>
@@ -215,6 +223,103 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal" data-modal="new-research">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Новое исследование</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <form action="" class="form">
+              <div class="form__item">
+                <span class="name">Название исследования *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+
+              <div class="form__footer">
+                <button type="submit" class="btn btn_orange btn_fullround">
+                  Сохранить
+                </button>
+                <button
+                  type="button"
+                  class="btn btn_green btn_fullround js-modal-close"
+                >
+                  Отмена
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="delete-research">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Удаление</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <div class="text-with-icon">
+              <div class="icon">
+                <svg
+                  viewBox="0 0 120 120"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M104.625 33.14C104.525 32.9 104.355 32.705 104.225 32.485C104.06 32.205 103.94 31.9 103.715 31.655L81.215 6.655C80.27 5.6 78.915 5 77.5 5H25C19.485 5 15 9.485 15 15V105C15 110.515 19.485 115 25 115H95C100.515 115 105 110.515 105 105V35C105 34.355 104.86 33.725 104.625 33.14ZM88.775 30H80V20.25L88.775 30ZM25 105V15H70V35C70 37.76 72.235 40 75 40H95V105H25Z"
+                    fill="#EA8F00"
+                  />
+                  <path
+                    d="M60 77.5C62.76 77.5 65 75.265 65 72.5V47.5C65 44.74 62.76 42.5 60 42.5C57.24 42.5 55 44.74 55 47.5V72.5C55 75.265 57.24 77.5 60 77.5Z"
+                    fill="#EA8F00"
+                  />
+                  <path
+                    d="M60 97.5C63.4518 97.5 66.25 94.7018 66.25 91.25C66.25 87.7982 63.4518 85 60 85C56.5482 85 53.75 87.7982 53.75 91.25C53.75 94.7018 56.5482 97.5 60 97.5Z"
+                    fill="#EA8F00"
+                  />
+                </svg>
+              </div>
+              <div class="text">
+                <p>
+                  Вы хотите удалить исследование<br /><span
+                    >Исследования 23-98 М-Ж Рука</span
+                  >
+                </p>
+              </div>
+            </div>
+            <!-- Кнопки обернул в класс form, чтобы не городить новые стили -->
+            <div class="form">
+              <div class="form__footer">
+                <button class="btn btn_orange btn_fullround">Да</button>
+                <button
+                  type="button"
+                  class="btn btn_green btn_fullround js-modal-close"
+                >
+                  Нет
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="modal" data-modal="feedback">
       <div class="modal__wrap">
