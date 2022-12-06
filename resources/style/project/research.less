@@ -1,0 +1,118 @@
+.research {
+  &__list {
+    padding: 11px 0 58px;
+
+    .item {
+      .flex-align-center-mixin();
+      padding: 15px 0;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px dashed @mdGrey;
+      }
+
+      .name {
+        .flex-align-center-mixin();
+        font-size: 20px;
+        margin-right: 20px;
+
+        .date {
+          margin-right: 22px;
+        }
+      }
+
+      .icons {
+        margin-left: auto;
+        .flex-align-center-mixin();
+      }
+
+      .share {
+        .flex-align-center-mixin();
+        font-size: 13px;
+        font-weight: 500;
+        border: 2px solid @green;
+        border-radius: 100px;
+        padding: 6px 13px;
+        margin-right: 5px;
+
+        svg {
+          stroke: @green;
+          width: 24px;
+          height: 24px;
+          margin-left: 10px;
+        }
+      }
+
+      .delete {
+        .flex-align-center-mixin();
+        .flex-justify-center-mixin();
+        border: 2px solid @green;
+        background-color: @green;
+        border-radius: 100px;
+        width: 40px;
+        height: 40px;
+
+        svg {
+          fill: @white;
+          width: 24px;
+          height: 24px;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .research {
+    &__list {
+      .item {
+        .name {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .research {
+    &__list {
+      .item {
+        .name {
+          font-size: 12px;
+        }
+
+        .share {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .research {
+    &__list {
+      .item {
+        .name {
+          .date {
+            margin-right: 10px;
+          }
+        }
+
+        .share {
+          .flex-align-center-mixin();
+          .flex-justify-center-mixin();
+          font-size: 0;
+          padding: 0;
+          width: 40px;
+          height: 40px;
+
+          svg {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
