@@ -96,7 +96,7 @@
 
             <button
               type="button"
-              data-target="new-patinet"
+              data-target="new-templ"
               class="btn btn_orange btn_fullround add-template"
             >
               Создать шаблон
@@ -270,6 +270,48 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal" data-modal="new-templ">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Новый шаблон</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <form action="" class="form">
+              <div class="form__item">
+                <span class="name">Название шаблона *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+
+              <div class="form__footer">
+                <button
+                  type="button"
+                  class="btn btn_green btn_fullround js-modal-close"
+                >
+                  Отмена
+                </button>
+
+                <button
+                  type="submit"
+                  class="btn btn_orange btn_fullround form__submit"
+                >
+                  Сохранить
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="modal" data-modal="feedback">
       <div class="modal__wrap">
