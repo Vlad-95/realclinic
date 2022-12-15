@@ -32,8 +32,13 @@
   justify-content: flex-end;
 }
 
-.flex-column-align-start() {
+.flex-column-mixin() {
   .flex-mixin();
   flex-direction: column;
+}
+
+.flex-column-align-start-mixin() {
+  .flex-mixin();
+  .flex-column-mixin();
   align-items: flex-start;
 }

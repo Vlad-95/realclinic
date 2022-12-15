@@ -1,0 +1,107 @@
+.handbook {
+  &__radio {
+    margin: 28px 0;
+    .flex-align-center-mixin();
+
+    label {
+      position: relative;
+      margin-right: 10px;
+
+      input {
+        position: absolute;
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+
+        &:checked + span {
+          background-color: @lightGreen;
+        }
+      }
+
+      span {
+        background-color: @white;
+        color: @grey;
+        border: 2px solid @green;
+        display: block;
+        line-height: 1.5;
+        font-weight: 400;
+        font-size: 20px;
+        border-radius: 100px;
+        padding: 5px 20px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__btns {
+    .flex-column-align-start-mixin();
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .btn {
+      &.reset {
+        display: none;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 2;
+        padding: 5px 20px;
+      }
+
+      &.submit {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.5;
+        padding: 5px 20px;
+        margin: 20px auto;
+      }
+    }
+  }
+
+  &__list {
+    padding: 48px 0;
+
+    .item {
+      .flex-align-center-mixin();
+      padding: 12px 0;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px dashed @mdGrey;
+      }
+
+      .icon {
+        border: 2px solid @green;
+        border-radius: 100px;
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        .flex-align-center-mixin();
+        .flex-justify-center-mixin();
+
+        svg {
+          width: 24px;
+          height: 24px;
+          fill: none;
+          stroke: @green;
+        }
+      }
+
+      .name {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.5;
+        margin-right: 20px;
+      }
+
+      .link {
+        margin-left: auto;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          fill: @green;
+        }
+      }
+    }
+  }
+}
