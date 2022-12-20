@@ -25,6 +25,7 @@
         transition: 0.3s;
         transform: rotate(0);
         margin-left: auto;
+        border-color: @green;
 
         &.active {
           transform: rotate(180deg);
@@ -33,13 +34,14 @@
         svg {
           width: 24px;
           height: 24px;
+          fill: @green;
         }
       }
     }
 
     .content {
       padding-bottom: 35px;
-      display: none;
+      // display: none;
 
       &__wrap {
         display: flex;
@@ -57,6 +59,42 @@
         min-width: 300px;
         padding-right: 20px;
         margin-bottom: 10px;
+
+        &_drop {
+          position: relative;
+
+          .dropdown {
+            padding: 9px 0 0 42px;
+
+            .row {
+              display: flex;
+              flex-wrap: wrap;
+
+              .checkbox {
+                margin-right: 20px;
+                position: relative;
+                padding-right: 12px;
+
+                &:not(:last-of-type) {
+                  position: relative;
+                  margin-right: 20px;
+
+                  &:after {
+                    content: '';
+                    position: absolute;
+                    left: 100%;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    height: 60%;
+                    width: 1px;
+                    background-color: @grey;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
 
       .radio {
@@ -95,6 +133,7 @@
             border-radius: 100px;
             border: 1px solid;
             background-color: @white;
+            border-color: #e0e0e0;
           }
 
           &:after {
@@ -107,8 +146,68 @@
             top: 10px;
             transition: 0.3s;
             opacity: 0;
+            background-color: @green;
           }
         }
+      }
+
+      .checkbox {
+        position: relative;
+        display: inline-block;
+
+        input {
+          position: absolute;
+          width: 0;
+          opacity: 0;
+          visibility: hidden;
+
+          &:checked + span {
+            &:after {
+              opacity: 1;
+            }
+          }
+        }
+
+        span {
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 1.76;
+          position: relative;
+          padding-left: 38px;
+          cursor: pointer;
+          display: block;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 3px;
+            width: 24px;
+            height: 24px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            background-color: @white;
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            transition: 0.3s;
+            opacity: 0;
+            left: 7px;
+            top: 11px;
+            width: 11px;
+            height: 9px;
+            background-image: url("data:image/svg+xml,%3Csvg width='11' height='9' viewBox='0 0 13 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.00019 8.99994C4.86858 9.0007 4.73812 8.97548 4.61628 8.92571C4.49444 8.87595 4.38363 8.80262 4.29019 8.70994L1.29019 5.70994C1.19695 5.6167 1.12299 5.50601 1.07253 5.38419C1.02207 5.26237 0.996094 5.1318 0.996094 4.99994C0.996094 4.73364 1.10188 4.47825 1.29019 4.28994C1.47849 4.10164 1.73388 3.99585 2.00019 3.99585C2.26649 3.99585 2.52188 4.10164 2.71019 4.28994L5.00019 6.58994L10.2902 1.28994C10.4785 1.10164 10.7339 0.99585 11.0002 0.99585C11.2665 0.99585 11.5219 1.10164 11.7102 1.28994C11.8985 1.47825 12.0043 1.73364 12.0043 1.99994C12.0043 2.26624 11.8985 2.52164 11.7102 2.70994L5.71019 8.70994C5.61675 8.80262 5.50593 8.87595 5.38409 8.92571C5.26225 8.97548 5.13179 9.0007 5.00019 8.99994Z' fill='%2385BC20'/%3E%3C/svg%3E%0A");
+          }
+        }
+      }
+
+      .textarea {
+        width: 100%;
+        height: 200px;
+        border: 1px solid @mdGrey;
+        padding: 20px 15px;
       }
     }
 
@@ -166,6 +265,20 @@
             }
           }
         }
+
+        .checkbox {
+          span {
+            font-size: 15px;
+
+            &:before {
+              top: 0;
+            }
+
+            &:after {
+              top: 7px;
+            }
+          }
+        }
       }
     }
   }
@@ -181,7 +294,32 @@
       }
 
       .content {
+        .item {
+          &_drop {
+            .dropdown {
+              padding-left: 30px;
+            }
+          }
+        }
         .radio {
+          span {
+            font-size: 12px;
+            padding-left: 30px;
+
+            &:before {
+              top: 0px;
+              width: 20px;
+              height: 20px;
+            }
+
+            &:after {
+              top: 5px;
+              left: 5px;
+            }
+          }
+        }
+
+        .checkbox {
           span {
             font-size: 12px;
             padding-left: 30px;

@@ -176,5 +176,17 @@
         <path d="M15.5 6H8.5V11H15.5V6Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 
+    <symbol id="card-clear" viewBox="0 0 24 24" fill="none">
+        <path d="M2 21H22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.5 2L3.5 14L6.5 17H10.5L20.5 7L15.5 2Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+
+    <symbol id="card-copy" viewBox="0 0 24 24" fill="none">
+        <path d="M17 12.0042H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 6L17 12L11 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 6V18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
 
 </svg>
