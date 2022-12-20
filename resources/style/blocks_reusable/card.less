@@ -142,3 +142,63 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .card {
+    &__cat {
+      .head {
+        .name {
+          font-size: 20px;
+        }
+      }
+
+      .content {
+        .radio {
+          span {
+            font-size: 15px;
+
+            &:before {
+              top: 0;
+            }
+
+            &:after {
+              top: 7px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .card {
+    &__cat {
+      .head {
+        .name {
+          font-size: 15px;
+        }
+      }
+
+      .content {
+        .radio {
+          span {
+            font-size: 12px;
+            padding-left: 30px;
+
+            &:before {
+              top: 0px;
+              width: 20px;
+              height: 20px;
+            }
+
+            &:after {
+              top: 5px;
+              left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

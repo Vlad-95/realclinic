@@ -41,7 +41,7 @@
 
     .btn {
       &.reset {
-        display: none;
+        // display: none;
         font-weight: 400;
         font-size: 15px;
         line-height: 2;
@@ -73,6 +73,7 @@
         border: 2px solid @green;
         border-radius: 100px;
         width: 40px;
+        min-width: 40px;
         height: 40px;
         margin-right: 20px;
         .flex-align-center-mixin();
@@ -100,6 +101,50 @@
           width: 24px;
           height: 24px;
           fill: @green;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .handbook {
+    &__radio {
+      label {
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &__btns {
+      .btn {
+        &.submit {
+          font-size: 15px;
+        }
+      }
+    }
+
+    &__list {
+      .item {
+        .name {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .handbook {
+    &__btns {
+      .btn {
+        &.reset {
+          font-size: 12px;
+        }
+
+        &.submit {
+          font-size: 12px;
         }
       }
     }
