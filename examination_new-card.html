@@ -94,13 +94,31 @@
           <div class="page-title">
             <h1>Карта нового осмотра</h1>
 
+            <div class="calendar">
+              <p>Дата:</p>
+              <label>
+                <input type="text" placeholder="ДД/ММ/ГГГГ" />
+
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#calendar"></use>
+                </svg>
+              </label>
+            </div>
+
             <a
               href="javascript:;"
-              class="btn btn_orange btn_fullround add-card"
+              class="btn btn_strokeorange btn_fullround list-card"
             >
-              Новая карта первичного осмотра
+              К списку карт
+            </a>
+
+            <a
+              href="javascript:;"
+              class="btn btn_orange btn_fullround choose-templ"
+            >
+              Выбрать шаблон
               <svg>
-                <use xlink:href="img/icons/sprite.svg#plus"></use>
+                <use xlink:href="img/icons/sprite.svg#card-templ"></use>
               </svg>
             </a>
           </div>
@@ -246,9 +264,9 @@
               </div>
 
               <div class="main-content">
-                <div class="tabs">
-                  <div class="item active">
-                    <div class="name" data-tab="left">Левая сторона</div>
+                <div class="tabs js-tabs">
+                  <div class="item active" data-tab="left">
+                    <div class="name">Левая сторона</div>
                     <div class="btns">
                       <button type="button" class="btn btn_fullround">
                         Очистить
@@ -270,8 +288,8 @@
                     </div>
                   </div>
 
-                  <div class="item">
-                    <div class="name" data-tab="right">Правая сторона</div>
+                  <div class="item" data-tab="right">
+                    <div class="name">Правая сторона</div>
                     <div class="btns">
                       <button type="button" class="btn btn_fullround">
                         Очистить
@@ -282,7 +300,7 @@
                         </svg>
                       </button>
 
-                      <button type="button" class="btn btn_fullround">
+                      <button type="button" class="btn btn_fullround rotate">
                         Копировать для левой
                         <svg>
                           <use
@@ -1300,19 +1318,62 @@
               </div>
 
               <div class="new-card__footer">
-                <button type="submit" class="btn btn_fullround btn_green">
+                <button type="submit" class="btn btn_fullround btn_green save">
                   Сохранить
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#card-save"></use>
+                  </svg>
                 </button>
 
-                <button type="button" class="btn btn_fullround">
+                <button
+                  type="button"
+                  class="btn btn_fullround btn_strokegreen make-templ"
+                >
                   Сделать шаблоном
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#card-templ"></use>
+                  </svg>
                 </button>
 
-                <a href="javascript:;" class="btn btn_fullround btn_orange">
-                  Сделать шаблоном
+                <a
+                  href="javascript:;"
+                  class="btn btn_fullround btn_orange preview"
+                >
+                  Предпросмотр заключения
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#card-preview"></use>
+                  </svg>
                 </a>
               </div>
             </form>
+
+            <div class="result">
+              <h2 class="title">Готовые заключения</h2>
+
+              <div class="list">
+                <div>
+                  <!-- Если с заключением все ок -->
+                  <svg>
+                    <use
+                      xlink:href="img/icons/sprite.svg#conclusion-done"
+                    ></use>
+                  </svg>
+                  Kontantinopolsky_KK_1955_20-03-22
+                </div>
+
+                <div>
+                  <!-- Если с заключением не все ок -->
+                  <svg>
+                    <use
+                      xlink:href="img/icons/sprite.svg#conclusion-error"
+                    ></use>
+                  </svg>
+
+                  Kontantinopolsky_KK_1955_20-03-22_v1 — внесены изменения, не
+                  отображенные в Карте осмотра
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

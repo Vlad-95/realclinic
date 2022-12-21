@@ -12,6 +12,43 @@
     }
   }
 
+  .calendar {
+    .flex-align-center-mixin();
+    margin-left: 33px;
+    margin-right: 20px;
+
+    p {
+      font-size: 15px;
+      margin: 0;
+      margin-right: 12px;
+    }
+
+    label {
+      position: relative;
+
+      input {
+        font-weight: 400;
+        font-size: 13px;
+        border-radius: 10px;
+        border: 1px solid @green;
+        width: 100%;
+        height: 36px;
+        max-width: 140px;
+        padding: 10px;
+        padding-right: 32px;
+      }
+
+      svg {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+        width: 24px;
+        height: 24px;
+        stroke: @grey;
+      }
+    }
+  }
+
   .add-card {
     .flex-align-center-mixin();
     margin-left: auto;
@@ -40,6 +77,36 @@
       width: 22px;
       height: 22px;
       fill: @white;
+      margin-left: 13px;
+    }
+  }
+
+  .list-card {
+    .flex-align-center-mixin();
+    margin-left: auto;
+    padding: 7px 19px;
+    font-size: 15px;
+    line-height: 1.5;
+
+    svg {
+      width: 22px;
+      height: 22px;
+      stroke: @white;
+      margin-left: 13px;
+    }
+  }
+
+  .choose-templ {
+    .flex-align-center-mixin();
+    margin-left: 5px;
+    padding: 7px 19px;
+    font-size: 15px;
+    line-height: 1.5;
+
+    svg {
+      width: 22px;
+      height: 22px;
+      stroke: @white;
       margin-left: 13px;
     }
   }
@@ -109,10 +176,27 @@
   .page-title {
     flex-wrap: wrap;
 
+    .calendar {
+      margin-left: 15px;
+      margin-right: 10px;
+    }
+
     .add-patient,
     .add-template,
     .add-research {
       margin-left: auto;
+    }
+
+    .list-card {
+      padding: 7px 9px;
+    }
+
+    .choose-templ {
+      padding: 7px 9px;
+
+      svg {
+        display: none;
+      }
     }
 
     .links {
@@ -135,6 +219,10 @@
       margin-bottom: 20px;
     }
 
+    .calendar {
+      margin-left: 0;
+    }
+
     .add-card {
       margin-left: 0;
       font-size: 12px;
@@ -152,6 +240,27 @@
       &__item {
         margin-bottom: 5px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .page-title {
+    .calendar {
+      order: 3;
+      margin-right: 0;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .list-card {
+      order: 1;
+      margin-left: 0;
+    }
+
+    .choose-templ {
+      order: 2;
+      margin-right: auto;
     }
   }
 }

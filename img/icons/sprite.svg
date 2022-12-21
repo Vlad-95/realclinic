@@ -181,12 +181,42 @@
         <path d="M15.5 2L3.5 14L6.5 17H10.5L20.5 7L15.5 2Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 
-
     <symbol id="card-copy" viewBox="0 0 24 24" fill="none">
         <path d="M17 12.0042H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M11 6L17 12L11 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M21 6V18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 
+    <symbol id="card-save" viewBox="0 0 24 24" fill="none">
+        <path d="M5 22H19C19.5523 22 20 21.5523 20 21V7H15V2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 2L20 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.5 12.5L8 15L10.5 17.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 15H16V11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="card-templ" viewBox="0 0 24 24" fill="none">
+        <path d="M5 22H19C19.5523 22 20 21.5523 20 21V7H15V2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 2L20 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 9.5L13.2617 12.2634L16.2797 12.6094L14.0414 14.6633L14.645 17.6406L12 16.1465L9.35495 17.6406L9.95855 14.6633L7.72025 12.6094L10.7383 12.2634L12 9.5Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="card-preview" viewBox="0 0 24 24" fill="none">
+        <path d="M5 22H19C19.5523 22 20 21.5523 20 21V7H15V2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 2L20 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 17C14.4853 17 16.5 14 16.5 14C16.5 14 14.4853 11 12 11C9.5147 11 7.5 14 7.5 14C7.5 14 9.5147 17 12 17Z" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M12 15C12.5523 15 13 14.5523 13 14C13 13.4477 12.5523 13 12 13C11.4477 13 11 13.4477 11 14C11 14.5523 11.4477 15 12 15Z"/>
+    </symbol>
+
+    <symbol id="conclusion-done" viewBox="0 0 24 24" fill="none">
+        <path d="M5 22H19C19.5523 22 20 21.5523 20 21V7H15V2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22Z" stroke="#85BC20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 2L20 7" stroke="#85BC20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.5 14.5L11.5 17L16 11.5" stroke="#85BC20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="conclusion-error" viewBox="0 0 24 24" fill="none">
+        <path d="M20.925 6.628C20.905 6.58 20.871 6.541 20.845 6.497C20.812 6.441 20.788 6.38 20.743 6.331L16.243 1.331C16.054 1.12 15.783 1 15.5 1H5C3.897 1 3 1.897 3 3V21C3 22.103 3.897 23 5 23H19C20.103 23 21 22.103 21 21V7C21 6.871 20.972 6.745 20.925 6.628ZM17.755 6H16V4.05L17.755 6ZM5 21V3H14V7C14 7.552 14.447 8 15 8H19V21H5Z" fill="#EA8F00"/>
+        <path d="M12 15.5C12.552 15.5 13 15.053 13 14.5V9.5C13 8.948 12.552 8.5 12 8.5C11.448 8.5 11 8.948 11 9.5V14.5C11 15.053 11.448 15.5 12 15.5Z" fill="#EA8F00"/>
+        <path d="M12 19.5C12.6904 19.5 13.25 18.9404 13.25 18.25C13.25 17.5596 12.6904 17 12 17C11.3096 17 10.75 17.5596 10.75 18.25C10.75 18.9404 11.3096 19.5 12 19.5Z" fill="#EA8F00"/>
+    </symbol>
 
 </svg>

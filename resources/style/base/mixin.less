@@ -2,33 +2,49 @@
   display: flex;
 }
 
+.flex-row-mixin() {
+  flex-direction: row;
+}
+
 .flex-align-center-mixin() {
   .flex-mixin();
+  .flex-row-mixin();
   align-items: center;
 }
 
 .flex-align-start-mixin() {
   .flex-mixin();
+  .flex-row-mixin();
   align-items: flex-start;
 }
 
 .flex-align-end-mixin() {
   .flex-mixin();
+  .flex-row-mixin();
   align-items: flex-end;
 }
 
 .flex-justify-center-mixin() {
   .flex-mixin();
+  .flex-row-mixin();
   justify-content: center;
 }
 
 .flex-justify-between-mixin() {
   .flex-mixin();
+  .flex-row-mixin();
   justify-content: space-between;
+}
+
+.flex-justify-start-mixin() {
+  .flex-mixin();
+  .flex-row-mixin();
+  justify-content: flex-start;
 }
 
 .flex-justify-end-mixin() {
   .flex-mixin();
+  .flex-row-mixin();
   justify-content: flex-end;
 }
 

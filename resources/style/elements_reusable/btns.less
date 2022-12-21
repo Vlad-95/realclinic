@@ -17,6 +17,15 @@
     }
   }
 
+  &_strokeorange {
+    background-color: @white;
+    border: 2px solid @orange;
+
+    &:hover {
+      border-color: lighten(@orange, 10%);
+    }
+  }
+
   &_green {
     background-color: @green;
     color: @white;
@@ -24,6 +33,15 @@
 
     &:hover {
       background-color: lighten(@green, 10%);
+      border-color: lighten(@green, 10%);
+    }
+  }
+
+  &_strokegreen {
+    background-color: @white;
+    border: 2px solid @green;
+
+    &:hover {
       border-color: lighten(@green, 10%);
     }
   }
