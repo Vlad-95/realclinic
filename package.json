@@ -17,6 +17,7 @@
     "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
     "autoprefixer": "^10.4.5",
+    "autosize": "^5.0.2",
     "babel-loader": "^8.2.5",
     "core-js": "^3.26.1",
     "css-declaration-sorter": "^6.2.2",

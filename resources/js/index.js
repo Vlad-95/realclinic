@@ -7,6 +7,7 @@ import form from './modules/form';
 import modal from './modules/modal';
 import tabs from './modules/tabs';
 import accordion from './modules/accordion';
+import preview from './modules/preview';
 
 $(document).ready(function () {
   mainCards();
@@ -15,4 +16,5 @@ $(document).ready(function () {
   modal();
   tabs();
   accordion();
+  preview();
 });

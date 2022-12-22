@@ -1431,7 +1431,7 @@
 
     <div class="modal" data-modal="choose-templ">
       <div class="modal__wrap">
-        <div class="container">
+        <div class="container wide">
           <div class="head">
             <h3 class="name">Выбор шаблона</h3>
 
@@ -1451,15 +1451,74 @@
               </div>
             </div>
 
+            <div class="search">
+              <form action="" class="search__form">
+                <input type="text" class="input" placeholder="Найти" />
+                <button class="submit">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+
             <div
               class="tabs-content js-tabs-content active"
               data-tab-content="my-templ"
-            ></div>
+            >
+              <div class="templates">
+                <div class="list">
+                  <div class="elem">
+                    <div class="name">Шаблон №1</div>
+
+                    <a href="javascript:;" class="link">
+                      <svg>
+                        <use xlink:href="img/icons/sprite.svg#arr-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+
+                  <div class="elem">
+                    <div class="name">Шаблон №1</div>
+
+                    <a href="javascript:;" class="link">
+                      <svg>
+                        <use xlink:href="img/icons/sprite.svg#arr-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div
               class="tabs-content js-tabs-content"
               data-tab-content="other-templ"
-            ></div>
+            >
+              <div class="templates">
+                <div class="list">
+                  <div class="elem">
+                    <div class="name">Шаблон №2</div>
+
+                    <a href="javascript:;" class="link">
+                      <svg>
+                        <use xlink:href="img/icons/sprite.svg#arr-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+
+                  <div class="elem">
+                    <div class="name">Шаблон №2</div>
+
+                    <a href="javascript:;" class="link">
+                      <svg>
+                        <use xlink:href="img/icons/sprite.svg#arr-r"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- Кнопки обернул в класс form, чтобы не городить новые стили -->
             <div class="form">
               <div class="form__footer">

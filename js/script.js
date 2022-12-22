@@ -1,6 +1,22 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/autosize/dist/autosize.esm.js":
+/*!****************************************************!*\
+  !*** ./node_modules/autosize/dist/autosize.esm.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var e,t,n="function"==typeof Map?new Map:(e=[],t=[],{has:function(t){return e.indexOf(t)>-1},get:function(n){return t[e.indexOf(n)]},set:function(n,o){-1===e.indexOf(n)&&(e.push(n),t.push(o))},delete:function(n){var o=e.indexOf(n);o>-1&&(e.splice(o,1),t.splice(o,1))}}),o=function(e){return new Event(e,{bubbles:!0})};try{new Event("test")}catch(e){o=function(e){var t=document.createEvent("Event");return t.initEvent(e,!0,!1),t}}function r(e){var t=n.get(e);t&&t.destroy()}function i(e){var t=n.get(e);t&&t.update()}var l=null;"undefined"==typeof window||"function"!=typeof window.getComputedStyle?((l=function(e){return e}).destroy=function(e){return e},l.update=function(e){return e}):((l=function(e,t){return e&&Array.prototype.forEach.call(e.length?e:[e],function(e){return function(e){if(e&&e.nodeName&&"TEXTAREA"===e.nodeName&&!n.has(e)){var t,r=null,i=null,l=null,a=function(){e.clientWidth!==i&&p()},d=function(t){window.removeEventListener("resize",a,!1),e.removeEventListener("input",p,!1),e.removeEventListener("keyup",p,!1),e.removeEventListener("autosize:destroy",d,!1),e.removeEventListener("autosize:update",p,!1),Object.keys(t).forEach(function(n){e.style[n]=t[n]}),n.delete(e)}.bind(e,{height:e.style.height,resize:e.style.resize,overflowY:e.style.overflowY,overflowX:e.style.overflowX,wordWrap:e.style.wordWrap});e.addEventListener("autosize:destroy",d,!1),"onpropertychange"in e&&"oninput"in e&&e.addEventListener("keyup",p,!1),window.addEventListener("resize",a,!1),e.addEventListener("input",p,!1),e.addEventListener("autosize:update",p,!1),e.style.overflowX="hidden",e.style.wordWrap="break-word",n.set(e,{destroy:d,update:p}),"vertical"===(t=window.getComputedStyle(e,null)).resize?e.style.resize="none":"both"===t.resize&&(e.style.resize="horizontal"),r="content-box"===t.boxSizing?-(parseFloat(t.paddingTop)+parseFloat(t.paddingBottom)):parseFloat(t.borderTopWidth)+parseFloat(t.borderBottomWidth),isNaN(r)&&(r=0),p()}function s(t){var n=e.style.width;e.style.width="0px",e.style.width=n,e.style.overflowY=t}function u(){if(0!==e.scrollHeight){var t=function(e){for(var t=[];e&&e.parentNode&&e.parentNode instanceof Element;)e.parentNode.scrollTop&&(e.parentNode.style.scrollBehavior="auto",t.push([e.parentNode,e.parentNode.scrollTop])),e=e.parentNode;return function(){return t.forEach(function(e){var t=e[0];t.scrollTop=e[1],t.style.scrollBehavior=null})}}(e);e.style.height="",e.style.height=e.scrollHeight+r+"px",i=e.clientWidth,t()}}function p(){u();var t=Math.round(parseFloat(e.style.height)),n=window.getComputedStyle(e,null),r="content-box"===n.boxSizing?Math.round(parseFloat(n.height)):e.offsetHeight;if(r<t?"hidden"===n.overflowY&&(s("scroll"),u(),r="content-box"===n.boxSizing?Math.round(parseFloat(window.getComputedStyle(e,null).height)):e.offsetHeight):"hidden"!==n.overflowY&&(s("hidden"),u(),r="content-box"===n.boxSizing?Math.round(parseFloat(window.getComputedStyle(e,null).height)):e.offsetHeight),l!==r){l=r;var i=o("autosize:resized");try{e.dispatchEvent(i)}catch(e){}}}}(e)}),e}).destroy=function(e){return e&&Array.prototype.forEach.call(e.length?e:[e],r),e},l.update=function(e){return e&&Array.prototype.forEach.call(e.length?e:[e],i),e});var a=l;/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (a);
+
+
+/***/ }),
+
 /***/ "./resources/js/modules/accordion.js":
 /*!*******************************************!*\
   !*** ./resources/js/modules/accordion.js ***!
@@ -194,6 +210,37 @@ var modal = function modal() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);
+
+/***/ }),
+
+/***/ "./resources/js/modules/preview.js":
+/*!*****************************************!*\
+  !*** ./resources/js/modules/preview.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var autosize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! autosize */ "./node_modules/autosize/dist/autosize.esm.js");
+/* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+
+var preview = function preview() {
+  if ($('.examination__preview').length) {
+    // размер textarea
+    (0,autosize__WEBPACK_IMPORTED_MODULE_0__["default"])($('.examination__preview textarea')); // редактирование
+
+    var editBtn = $('.examination__preview .edit');
+    editBtn.on('click', function () {
+      $(this).prev().removeAttr('readonly');
+    });
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (preview);
 
 /***/ }),
 
@@ -15172,7 +15219,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/modal */ "./resources/js/modules/modal.js");
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/tabs */ "./resources/js/modules/tabs.js");
 /* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/accordion */ "./resources/js/modules/accordion.js");
+/* harmony import */ var _modules_preview__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/preview */ "./resources/js/modules/preview.js");
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
 
 
 
@@ -15188,6 +15237,7 @@ $(document).ready(function () {
   (0,_modules_modal__WEBPACK_IMPORTED_MODULE_5__["default"])();
   (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_6__["default"])();
   (0,_modules_accordion__WEBPACK_IMPORTED_MODULE_7__["default"])();
+  (0,_modules_preview__WEBPACK_IMPORTED_MODULE_8__["default"])();
 });
 })();
 

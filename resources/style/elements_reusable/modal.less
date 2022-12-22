@@ -18,6 +18,10 @@
     background-color: @white;
     width: 100%;
     max-width: 700px;
+
+    &.wide {
+      max-width: 970px;
+    }
   }
 
   .head {
@@ -132,6 +136,18 @@
     }
   }
 
+  .search {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 35px;
+
+    &__form {
+      .input {
+        background-color: @lightGrey;
+      }
+    }
+  }
+
   .text-with-icon {
     .flex-align-center-mixin();
     padding: 10px 50px;
@@ -152,6 +168,39 @@
       p {
         font-size: 20px;
         margin: 0;
+      }
+    }
+  }
+
+  .templates {
+    .list {
+      .elem {
+        .flex-align-center-mixin();
+        padding: 8px 9px;
+        padding-right: 18px;
+
+        &:nth-of-type(odd) {
+          background-color: fade(@lightBlue, 20%);
+        }
+
+        .name {
+          font-size: 15px;
+          margin-right: 20px;
+        }
+
+        .link {
+          .flex-align-center-mixin();
+          .flex-justify-center-mixin();
+          margin-left: auto;
+          width: 24px;
+          height: 24px;
+
+          svg {
+            width: 24px;
+            height: 24px;
+            fill: @blue;
+          }
+        }
       }
     }
   }
@@ -177,6 +226,16 @@
         }
       }
     }
+
+    .templates {
+      .list {
+        .elem {
+          .name {
+            font-size: 12px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -197,6 +256,12 @@
     .tabs {
       &__item {
         font-size: 15px;
+
+        &:not(:last-of-type) {
+          &:before {
+            top: 3px;
+          }
+        }
       }
     }
 
