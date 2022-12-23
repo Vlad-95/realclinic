@@ -85,7 +85,7 @@
               font-size: 15px;
               line-height: 2;
               width: 41%;
-              min-width: 280px;
+              // min-width: 280px;
             }
 
             .value {
@@ -195,6 +195,7 @@
           margin-left: auto;
           padding: 7px 16px;
           font-size: 15px;
+          white-space: nowrap;
 
           svg {
             width: 24px;
@@ -217,6 +218,178 @@
       font-size: 15px;
       line-height: 2;
       padding: 3px 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .examination {
+    &__preview {
+      padding-bottom: 40px;
+
+      .block {
+        &__head {
+          .name {
+            font-size: 25px !important;
+          }
+        }
+
+        &__content {
+          .info {
+            .key {
+              font-size: 12px;
+            }
+
+            .value {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .plate {
+          .title {
+            font-size: 20px;
+          }
+
+          .list {
+            .key {
+              font-size: 12px;
+            }
+
+            .value {
+              label {
+                .input {
+                  font-size: 12px;
+                }
+
+                .textarea {
+                  font-size: 12px;
+                }
+
+                .edit {
+                  top: 2px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .conclusion {
+        &__footer {
+          margin-bottom: 40px;
+          .attention {
+            font-size: 12px;
+
+            .icon {
+              top: -8px;
+            }
+          }
+
+          .btn {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .btn-back {
+        font-size: 12px;
+        max-width: 140px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .examination {
+    &__preview {
+      .block {
+        &__head {
+          .name {
+            font-size: 20px !important;
+          }
+        }
+
+        &__content {
+          .info {
+            .key {
+              width: 25%;
+            }
+          }
+        }
+
+        .plate {
+          .title {
+            font-size: 17px;
+          }
+
+          .list {
+            &__item {
+              .key {
+                width: 23%;
+              }
+
+              .value {
+                width: 77%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .examination {
+    &__preview {
+      .conclusion {
+        &__footer {
+          flex-wrap: wrap;
+
+          .attention {
+            width: 100%;
+            margin-bottom: 25px;
+          }
+
+          .btn {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .examination {
+    &__preview {
+      .block {
+        &__content {
+          .info {
+            .key {
+              min-width: 140px;
+            }
+          }
+        }
+
+        .plate {
+          .list {
+            &__item {
+              flex-wrap: wrap;
+              .key {
+                width: 100%;
+                margin-bottom: 15px;
+              }
+
+              .value {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
