@@ -89,141 +89,64 @@
     </header>
 
     <main>
-      <div class="export">
+      <div class="research-new">
         <div class="wrapper">
           <div class="page-title">
-            <h1 class="big">Выгрузка в Excel</h1>
-
-            <div class="links">
-              <a href="javascript:;" class="links__item">
-                Осмотры
-                <svg>
-                  <use xlink:href="img/icons/sprite.svg#examination"></use>
-                </svg>
-              </a>
-              <a href="javascript:;" class="links__item">
-                Шаблоны
-                <svg>
-                  <use xlink:href="img/icons/sprite.svg#template"></use>
-                </svg>
-              </a>
-              <a href="javascript:;" class="links__item active">
-                Экспорт
-                <svg>
-                  <use xlink:href="img/icons/sprite.svg#export"></use>
-                </svg>
-              </a>
-            </div>
+            <h1 class="big">23-98 М-Ж Рука</h1>
           </div>
+        </div>
 
+        <form action="" class="research-new-form">
           <div class="params">
-            <div class="title">Параметры экспорта</div>
-            <div class="list">
-              <div class="elem">
-                <div class="name">Экспорт №1</div>
+            <div class="wrapper">
+              <div class="name">Параметры исследования</div>
+              <div class="filter">
+                <div class="filter__name">Пациенты</div>
 
-                <a href="javascript:;" class="btn btn_strokeblue btn_fullround"
-                  >Применить</a
-                >
-              </div>
-
-              <div class="elem">
-                <div class="name">Экспорт №1</div>
-
-                <a href="javascript:;" class="btn btn_strokeblue btn_fullround"
-                  >Применить</a
-                >
-              </div>
-
-              <div class="elem">
-                <div class="name">Экспорт №1</div>
-
-                <a href="javascript:;" class="btn btn_strokeblue btn_fullround"
-                  >Применить</a
-                >
-              </div>
-
-              <div class="elem">
-                <div class="name">Экспорт №1</div>
-
-                <a href="javascript:;" class="btn btn_strokeblue btn_fullround"
-                  >Применить</a
-                >
-              </div>
-
-              <div class="elem">
-                <div class="name">Экспорт №1</div>
-
-                <a href="javascript:;" class="btn btn_strokeblue btn_fullround"
-                  >Применить</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="attention">
-          <div class="wrapper">
-            <p>
-              <span class="icon">
-                <svg>
-                  <use xlink:href="img/icons/sprite.svg#export"></use>
-                </svg>
-              </span>
-              Название загруженного набора параметров, строка сохраняется пока
-              не внесены изменения в набор параметров
-            </p>
-          </div>
-        </div>
-
-        <form action="" class="export-form">
-          <div class="wrapper">
-            <div class="filter">
-              <div class="filter__name">Пациенты</div>
-
-              <div class="filter__row">
-                <div class="col">
-                  <div class="item">
-                    <label class="checkbox">
-                      <input type="checkbox" name="my-patinent" id="" />
-                      <span>Мои пациенты</span>
-                    </label>
-                  </div>
-
-                  <div class="item">
-                    <label class="checkbox">
-                      <input type="checkbox" name="other-patinent" id="" />
-                      <span>Пациенты других пользователей</span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="item">
-                    <label class="radio">
-                      <input type="radio" name="gender" id="" />
-                      <span>Мужчины</span>
-                    </label>
-                  </div>
-
-                  <div class="item">
-                    <label class="radio">
-                      <input type="radio" name="gender" id="" />
-                      <span>Женщины</span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="item inputs">
-                    <span>Возраст</span>
-                    <div class="fields">
-                      <label class="input">
-                        <input type="text" placeholder="От" />
+                <div class="filter__row">
+                  <div class="col">
+                    <div class="item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="my-patinent" id="" />
+                        <span>Мои пациенты</span>
                       </label>
-                      <label class="input">
-                        <input type="text" placeholder="До" />
+                    </div>
+
+                    <div class="item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="other-patinent" id="" />
+                        <span>Пациенты других пользователей</span>
                       </label>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="gender" id="" />
+                        <span>Мужчины</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="gender" id="" />
+                        <span>Женщины</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="item inputs">
+                      <span>Возраст</span>
+                      <div class="fields">
+                        <label class="input">
+                          <input type="text" placeholder="От" />
+                        </label>
+                        <label class="input">
+                          <input type="text" placeholder="До" />
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -232,65 +155,6 @@
           </div>
 
           <div class="card">
-            <div class="card__cat js-accordion-item">
-              <div class="wrapper">
-                <div class="head">
-                  <div class="name">Синдромы / Диагнозы</div>
-
-                  <div class="toggle js-accordion-toggle">
-                    <svg>
-                      <use xlink:href="img/icons/sprite.svg#chevron"></use>
-                    </svg>
-                  </div>
-                </div>
-
-                <div class="content js-accordion-content">
-                  <div class="search">
-                    <div class="search__form">
-                      <input type="text" class="input" placeholder="Найти" />
-                      <button class="submit">
-                        <svg>
-                          <use xlink:href="img/icons/sprite.svg#search"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <!-- 
-                    элементы могут быть в один столбик или два.
-                    Предлагаю на бэке добавлять класс fullwidth (один столбик). Если элементов больше, например 5, то выводить уже два столбика (убирать класс fullwidth)
-                  -->
-                  <div class="content__wrap fullwidth">
-                    <div class="item">
-                      <label class="checkbox">
-                        <input type="checkbox" name="cat" id="" />
-                        <span>Синдром 1</span>
-                      </label>
-                    </div>
-
-                    <div class="item">
-                      <label class="checkbox">
-                        <input type="checkbox" name="cat" id="" />
-                        <span>Синдром 2</span>
-                      </label>
-                    </div>
-                    <div class="item">
-                      <label class="checkbox">
-                        <input type="checkbox" name="cat" id="" />
-                        <span>Синдром 3</span>
-                      </label>
-                    </div>
-
-                    <div class="item">
-                      <label class="checkbox">
-                        <input type="checkbox" name="cat" id="" />
-                        <span>Синдром 4</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <div class="card__cat js-accordion-item">
               <div class="wrapper">
                 <div class="head">
@@ -717,22 +581,11 @@
           </div>
 
           <div class="wrapper">
-            <div class="export-form__footer">
-              <button
-                type="button"
-                data-target="new-export"
-                class="btn btn_green btn_fullround save"
-              >
-                Сохранить параметры экспорта
-                <svg>
-                  <use xlink:href="img/icons/sprite.svg#card-save"></use>
-                </svg>
-              </button>
-
+            <div class="research-new-form__footer">
               <button type="submit" class="btn btn_orange btn_fullround submit">
-                Выгрузить в Excel
+                Создать
                 <svg>
-                  <use xlink:href="img/icons/sprite.svg#export-not-fill"></use>
+                  <use xlink:href="img/icons/sprite.svg#plus"></use>
                 </svg>
               </button>
             </div>
