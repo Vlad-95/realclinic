@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realclinic</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top">
+        <div class="wrapper">
+          <div class="header__wrap">
+            <a href="javascript:;" class="logo">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="logo-text">
+              Для специалистов физической реабилитации и медицины<br />
+              электронный помощник
+            </div>
+
+            <button
+              class="btn btn_orange btn_fullround"
+              type="button"
+              data-target="feedback"
+            >
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#mail"></use>
+              </svg>
+
+              Свяжитесь с нами
+            </button>
+
+            <div class="burger"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="wrapper">
+          <div class="nav">
+            <ul class="menu">
+              <li><a href="javascript:;">Клинический осмотр</a></li>
+              <li><a href="javascript:;">Клинические исследования</a></li>
+              <li><a href="javascript:;">Клинический справочник</a></li>
+              <li><a href="javascript:;">HELP</a></li>
+            </ul>
+
+            <div class="links">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#user"></use>
+              </svg>
+
+              <a href="javascript:;" data-target="auth.signin">user@mail.com</a>
+              <a href="javascript:;" data-target="auth.signup" class="uppercase"
+                >Выйти</a
+              >
+            </div>
+
+            <div class="lang">
+              <a href="javascript:;" class="current"> Ru </a>
+              <a href="javascript:;">En</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mmenu">
+        <div class="mmenu__wrap">
+          <ul class="menu">
+            <li><a href="javascript:;">Клинический осмотр</a></li>
+            <li><a href="javascript:;">Клинические исследования</a></li>
+            <li><a href="javascript:;">Клинический справочник</a></li>
+            <li><a href="javascript:;">HELP</a></li>
+          </ul>
+
+          <div class="links">
+            <a href="javascript:;">user@mail.com</a>
+            <a href="javascript:;" class="uppercase">Выйти</a>
+          </div>
+
+          <div class="lang">
+            <a href="javascript:;" class="current"> Ru </a>
+            <a href="javascript:;">En</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="export">
+        <div class="wrapper">
+          <div class="page-title">
+            <h1>Выгрузка в Excel</h1>
+
+            <div class="links">
+              <a href="javascript:;" class="links__item">
+                Осмотры
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#examination"></use>
+                </svg>
+              </a>
+              <a href="javascript:;" class="links__item">
+                Шаблоны
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#template"></use>
+                </svg>
+              </a>
+              <a href="javascript:;" class="links__item active">
+                Экспорт
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#export"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="params">
+            <div class="title">Параметры экспорта</div>
+            <div class="list">
+              <div class="elem">
+                <div class="name">Экспорт №1</div>
+
+                <a href="javascript:;" class="btn btn_strokeblue btn_fullround"
+                  >Применить</a
+                >
+              </div>
+
+              <div class="elem">
+                <div class="name">Экспорт №1</div>
+
+                <a href="javascript:;" class="btn btn_strokeblue btn_fullround"
+                  >Применить</a
+                >
+              </div>
+
+              <div class="elem">
+                <div class="name">Экспорт №1</div>
+
+                <a href="javascript:;" class="btn btn_strokeblue btn_fullround"
+                  >Применить</a
+                >
+              </div>
+
+              <div class="elem">
+                <div class="name">Экспорт №1</div>
+
+                <a href="javascript:;" class="btn btn_strokeblue btn_fullround"
+                  >Применить</a
+                >
+              </div>
+
+              <div class="elem">
+                <div class="name">Экспорт №1</div>
+
+                <a href="javascript:;" class="btn btn_strokeblue btn_fullround"
+                  >Применить</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="attention">
+          <div class="wrapper">
+            <p>
+              <span class="icon">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#export"></use>
+                </svg>
+              </span>
+              Название загруженного набора параметров, строка сохраняется пока
+              не внесены изменения в набор параметров
+            </p>
+          </div>
+        </div>
+
+        <form action="" class="export-form">
+          <div class="wrapper">
+            <div class="filter">
+              <div class="filter__name">Пациенты</div>
+
+              <div class="filter__row">
+                <div class="col">
+                  <div class="item">
+                    <label class="checkbox">
+                      <input type="checkbox" name="my-patinent" id="" />
+                      <span>Мои пациенты</span>
+                    </label>
+                  </div>
+
+                  <div class="item">
+                    <label class="checkbox">
+                      <input type="checkbox" name="other-patinent" id="" />
+                      <span>Пациенты других пользователей</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="item">
+                    <label class="radio">
+                      <input type="radio" name="gender" id="" />
+                      <span>Мужчины</span>
+                    </label>
+                  </div>
+
+                  <div class="item">
+                    <label class="radio">
+                      <input type="radio" name="gender" id="" />
+                      <span>Женщины</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="item inputs">
+                    <span>Возраст</span>
+                    <div class="fields">
+                      <label class="input">
+                        <input type="text" placeholder="От" />
+                      </label>
+                      <label class="input">
+                        <input type="text" placeholder="До" />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__cat js-accordion-item">
+              <div class="wrapper">
+                <div class="head">
+                  <div class="name">Синдромы / Диагнозы</div>
+
+                  <div class="toggle js-accordion-toggle">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#chevron"></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="content js-accordion-content">
+                  <div class="search">
+                    <div class="search__form">
+                      <input type="text" class="input" placeholder="Найти" />
+                      <button class="submit">
+                        <svg>
+                          <use xlink:href="img/icons/sprite.svg#search"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- 
+                    элементы могут быть в один столбик или два.
+                    Предлагаю на бэке добавлять класс fullwidth (один столбик). Если элементов больше, например 5, то выводить уже два столбика (убирать класс fullwidth)
+                  -->
+                  <div class="content__wrap fullwidth">
+                    <div class="item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="cat" id="" />
+                        <span>Синдром 1</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="cat" id="" />
+                        <span>Синдром 2</span>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="cat" id="" />
+                        <span>Синдром 3</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="cat" id="" />
+                        <span>Синдром 4</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__cat js-accordion-item">
+              <div class="wrapper">
+                <div class="head">
+                  <div class="name">Категория</div>
+
+                  <div class="toggle js-accordion-toggle">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#chevron"></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="content js-accordion-content">
+                  <!-- 
+                    элементы могут быть в один столбик или два.
+                    Предлагаю на бэке добавлять класс fullwidth (один столбик). Если элементов больше, например 5, то выводить уже два столбика (убирать класс fullwidth)
+                  -->
+                  <div class="content__wrap">
+                    <div class="item item_drop">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Кисть</span>
+                      </label>
+
+                      <div class="dropdown">
+                        <div class="row">
+                          <label class="checkbox">
+                            <input type="checkbox" name="cat_drop1" id="" />
+                            <span>Правая</span>
+                          </label>
+
+                          <label class="checkbox">
+                            <input type="checkbox" name="cat_drop1" id="" />
+                            <span>Левая</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Кисть</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Предплечье</span>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Предплечье</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Локоть</span>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Локоть</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Плечо</span>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Плечо</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Колено</span>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Колено</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Голень</span>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Голень</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Бедро</span>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="cat" id="" />
+                        <span>Бедро</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__cat js-accordion-item">
+              <div class="wrapper">
+                <div class="head">
+                  <div class="name">Анамнез</div>
+
+                  <div class="toggle js-accordion-toggle">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#chevron"></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="content js-accordion-content">
+                  <div class="name">Параметр 1 [Левое]</div>
+                  <!-- 
+                    элементы могут быть в один столбик или два.
+                    Предлагаю на бэке добавлять класс fullwidth (один столбик). Если элементов больше, например 5, то выводить уже два столбика (убирать класс fullwidth)
+                  -->
+                  <div class="content__wrap fullwidth">
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 1</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 2</span>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 3</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 4</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 5</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="name">Параметр 1 [Правое]</div>
+
+                  <!-- 
+                    элементы могут быть в один столбик или два.
+                    Предлагаю на бэке добавлять класс fullwidth (один столбик). Если элементов больше, например 5, то выводить уже два столбика (убирать класс fullwidth)
+                  -->
+                  <div class="content__wrap fullwidth">
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 1</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 2</span>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 3</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 4</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 5</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__cat js-accordion-item">
+              <div class="wrapper">
+                <div class="head">
+                  <div class="name">Диагноз</div>
+
+                  <div class="toggle js-accordion-toggle">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#chevron"></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="content js-accordion-content">
+                  <div class="name">Параметр 1 [Левое]</div>
+                  <!-- 
+                    элементы могут быть в один столбик или два.
+                    Предлагаю на бэке добавлять класс fullwidth (один столбик). Если элементов больше, например 5, то выводить уже два столбика (убирать класс fullwidth)
+                  -->
+                  <div class="content__wrap fullwidth">
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 1</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 2</span>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 3</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 4</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 5</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="name">Параметр 1 [Правое]</div>
+
+                  <!-- 
+                    элементы могут быть в один столбик или два.
+                    Предлагаю на бэке добавлять класс fullwidth (один столбик). Если элементов больше, например 5, то выводить уже два столбика (убирать класс fullwidth)
+                  -->
+                  <div class="content__wrap fullwidth">
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 1</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 2</span>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 3</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 4</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 5</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__cat js-accordion-item">
+              <div class="wrapper">
+                <div class="head">
+                  <div class="name">Лечение</div>
+
+                  <div class="toggle js-accordion-toggle">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#chevron"></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="content js-accordion-content">
+                  <div class="name">Параметр 1 [Левое]</div>
+                  <!-- 
+                    элементы могут быть в один столбик или два.
+                    Предлагаю на бэке добавлять класс fullwidth (один столбик). Если элементов больше, например 5, то выводить уже два столбика (убирать класс fullwidth)
+                  -->
+                  <div class="content__wrap fullwidth">
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 1</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 2</span>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 3</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 4</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozL" id="" />
+                        <span>Значение 5</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="name">Параметр 1 [Правое]</div>
+
+                  <!-- 
+                    элементы могут быть в один столбик или два.
+                    Предлагаю на бэке добавлять класс fullwidth (один столбик). Если элементов больше, например 5, то выводить уже два столбика (убирать класс fullwidth)
+                  -->
+                  <div class="content__wrap fullwidth">
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 1</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 2</span>
+                      </label>
+                    </div>
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 3</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 4</span>
+                      </label>
+                    </div>
+
+                    <div class="item">
+                      <label class="radio">
+                        <input type="radio" name="diagnozR" id="" />
+                        <span>Значение 5</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <div class="export-form__footer">
+              <button type="button" class="btn btn_green btn_fullround save">
+                Сохранить параметры экспорта
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#card-save"></use>
+                </svg>
+              </button>
+
+              <button type="submit" class="btn btn_orange btn_fullround submit">
+                Выгрузить в Excel
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#export-not-fill"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="wrapper">
+          <div class="footer__wrap">
+            <a href="javascript:;" class="logo">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="logo-text">
+              Для специалистов физической реабилитации и медицины<br />
+              электронный помощник
+            </div>
+
+            <ul class="menu">
+              <li><a href="javascript:;">Клинический осмотр</a></li>
+              <li><a href="javascript:;">Клинические исследования</a></li>
+              <li><a href="javascript:;">Клинический справочник</a></li>
+              <li><a href="javascript:;">HELP</a></li>
+              <li><a href="javascript:;">Свяжитесь с нами</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="wrapper">
+          <div class="footer__wrap">
+            <span class="copyright">&#169; 2020, Register</span>
+            <span
+              >Если вы нашли ошибку на сайте, то
+              <a href="javascript:;" data-target="mistake"
+                >сообщите нам об этом</a
+              >
+            </span>
+            <a href="javascript:;">Политика конфиденциальности</a>
+            <a href="javascript:;">Пользовательское соглашение</a>
+            <a href="javascript:;" class="siluet">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#siluet"></use>
+              </svg>
+              Создание сайта: Студия Силуэт
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" data-modal="feedback">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Свяжитесь с нами</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <form action="" class="form">
+              <div class="form__item">
+                <span class="name">ФИО *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Телефон</span>
+                <label class="label">
+                  <input type="text" class="input js-phone" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Email *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Комментарий</span>
+                <label class="label">
+                  <textarea name="" class="textarea"></textarea>
+                </label>
+              </div>
+              <div class="form__item file">
+                <label class="label">
+                  <input type="file" name="file" id="" />
+                  <span class="text">Прикрепить файл</span>
+                </label>
+              </div>
+              <div class="form__footer">
+                <div class="form__item checkbox">
+                  <label class="label">
+                    <input type="checkbox" name="agree" id="" />
+                    <p class="text">
+                      <span
+                        >— я соглашаюсь с
+                        <a href="javascript:;"
+                          >Политикой конфиденциальности</a
+                        ></span
+                      >
+                    </p>
+                  </label>
+                </div>
+
+                <button class="btn btn_green btn_fullround form__submit">
+                  Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="mistake">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Сообщение об ошибке</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <form action="" class="form">
+              <div class="form__item">
+                <span class="name">Ссылка на страницу</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">В чем заключается ошибка *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Комментарий</span>
+                <label class="label">
+                  <textarea name="" class="textarea"></textarea>
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Ваше имя</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Телефон</span>
+                <label class="label">
+                  <input type="text" class="input js-phone" />
+                </label>
+              </div>
+              <div class="form__item">
+                <span class="name">Email *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+              <div class="form__footer">
+                <div class="form__item checkbox">
+                  <label class="label">
+                    <input type="checkbox" name="agree" id="" />
+                    <p class="text">
+                      <span
+                        >— я соглашаюсь с
+                        <a href="javascript:;"
+                          >Политикой конфиденциальности</a
+                        ></span
+                      >
+                    </p>
+                  </label>
+                </div>
+                <button class="btn btn_green btn_fullround form__submit">
+                  Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="forgot">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Забыли пароль?</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <form action="" class="form">
+              <div class="form__item">
+                <span class="name">Email *</span>
+                <label class="label">
+                  <input type="text" class="input" />
+                </label>
+              </div>
+
+              <div class="form__footer">
+                <button class="btn btn_green btn_fullround form__submit">
+                  Сбросить пароль
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="auth">
+      <div class="modal__wrap">
+        <div class="container">
+          <div class="head">
+            <h3 class="name">Вход</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <div class="tabs js-tabs">
+              <div class="tabs__item active" data-tab="signin">Авторизация</div>
+              <div class="tabs__item" data-tab="signup">Регистрация</div>
+            </div>
+            <!-- Авторизация -->
+            <div
+              class="tabs-content js-tabs-content active"
+              data-tab-content="signin"
+            >
+              <form action="" class="form">
+                <div class="form__item">
+                  <span class="name">Email *</span>
+                  <label class="label">
+                    <input type="text" class="input" />
+                  </label>
+                </div>
+                <div class="form__item">
+                  <span class="name">Пароль *</span>
+                  <label class="label">
+                    <input type="password" class="input" />
+                  </label>
+                </div>
+
+                <div class="form__footer">
+                  <a
+                    href="javascript:;"
+                    data-target="forgot"
+                    class="form__forgot"
+                  >
+                    Забыли пароль?
+                  </a>
+
+                  <button class="btn btn_green btn_fullround form__submit">
+                    Войти
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Регистрация -->
+            <div class="tabs-content js-tabs-content" data-tab-content="signup">
+              <form action="" class="form">
+                <div class="form__item">
+                  <span class="name">Email *</span>
+                  <label class="label">
+                    <input type="text" class="input" />
+                  </label>
+                </div>
+                <div class="form__item">
+                  <span class="name">ФИО *</span>
+                  <label class="label">
+                    <input type="text" class="input" />
+                  </label>
+                </div>
+                <div class="form__item">
+                  <span class="name">Телефон</span>
+                  <label class="label">
+                    <input type="text" class="input js-phone" />
+                  </label>
+                </div>
+                <div class="form__item">
+                  <span class="name">Специальность</span>
+                  <label class="label">
+                    <input type="text" class="input" />
+                  </label>
+                </div>
+
+                <div class="form__footer">
+                  <div class="form__item checkbox">
+                    <label class="label">
+                      <input type="checkbox" name="agree" id="" />
+                      <p class="text">
+                        <span
+                          >— я соглашаюсь с
+                          <a href="javascript:;"
+                            >Политикой конфиденциальности</a
+                          ></span
+                        >
+                      </p>
+                    </label>
+                  </div>
+                  <button class="btn btn_green btn_fullround form__submit">
+                    Отправить
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

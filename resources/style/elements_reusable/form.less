@@ -3,7 +3,7 @@
     margin-bottom: 15px;
 
     &.row {
-      .flex-align-start-mixin();
+      .row-align-start-mixin();
       margin-bottom: 10px;
 
       .name {
@@ -114,11 +114,10 @@
         }
 
         .text {
+          .row-align-center-mixin();
           position: relative;
           font-size: 15px;
           padding-left: 43px;
-          display: flex;
-          align-items: center;
           min-height: 30px;
 
           &:before {
@@ -149,7 +148,7 @@
 
     &.radio {
       .radio-row {
-        .flex-align-center-mixin();
+        .row-align-center-mixin();
         flex-wrap: wrap;
 
         .label {
@@ -258,8 +257,8 @@
   }
 
   &__footer {
-    .flex-align-center-mixin();
-    .flex-justify-between-mixin();
+    .row-align-center-mixin();
+    .row-justify-between-mixin();
     margin-top: 24px;
     border-top: 2px dotted @grey;
     padding: 20px 0;

@@ -1,10 +1,10 @@
 .filter-sort {
-  .flex-align-center-mixin();
+  .row-align-center-mixin();
   padding: 38px 0 24px;
   border-bottom: 1px solid @grey;
 
   .filter {
-    .flex-align-center-mixin();
+    .row-align-center-mixin();
 
     &__item {
       background-color: @white;
@@ -23,7 +23,7 @@
       }
 
       &.inputs {
-        .flex-align-center-mixin();
+        .row-align-center-mixin();
         padding: 9px;
         padding-right: 19px;
 
@@ -90,7 +90,7 @@
   }
 
   .sort {
-    .flex-align-center-mixin();
+    .row-align-center-mixin();
     margin-left: auto;
 
     &__item {
@@ -183,7 +183,7 @@
 
 @media screen and (max-width: 992px) {
   .filter-sort {
-    .flex-column-align-start-mixin();
+    .column-align-start-mixin();
     flex-wrap: wrap;
 
     .filter {
@@ -256,7 +256,7 @@
         }
 
         &.inputs {
-          .flex-column-align-start-mixin();
+          .column-align-start-mixin();
           padding: 9px;
 
           .col {

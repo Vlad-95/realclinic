@@ -3,7 +3,7 @@
     margin-bottom: 10px;
 
     .head {
-      .flex-align-center-mixin();
+      .row-align-center-mixin();
       padding: 24px 0 26px;
 
       .name {
@@ -15,8 +15,8 @@
       }
 
       .toggle {
-        .flex-align-center-mixin();
-        .flex-justify-center-mixin();
+        .row-align-center-mixin();
+        .row-justify-center-mixin();
         width: 40px;
         height: 40px;
         border-radius: 100px;
@@ -42,6 +42,19 @@
     .content {
       padding-bottom: 35px;
       // display: none;
+
+      & > * {
+        &:first-child {
+          margin-top: 0 !important;
+        }
+      }
+
+      .name {
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 22px;
+        margin-top: 20px;
+      }
 
       &__wrap {
         display: flex;
