@@ -97,7 +97,7 @@
             <div class="calendar">
               <p>Дата:</p>
               <label>
-                <input type="text" placeholder="ДД/ММ/ГГГГ" />
+                <input type="text" class="js-date" placeholder="ДД/ММ/ГГГГ" />
 
                 <svg>
                   <use xlink:href="img/icons/sprite.svg#calendar"></use>
@@ -265,9 +265,9 @@
               </div>
 
               <div class="main-content">
-                <div class="tabs js-tabs">
-                  <div class="item active" data-tab="left">
-                    <div class="name">Левая сторона</div>
+                <div class="tabs js-card-tabs">
+                  <div class="item active">
+                    <div class="name" data-card-tab="left">Левая сторона</div>
                     <div class="btns">
                       <button type="button" class="btn btn_fullround">
                         Очистить
@@ -289,8 +289,8 @@
                     </div>
                   </div>
 
-                  <div class="item" data-tab="right">
-                    <div class="name">Правая сторона</div>
+                  <div class="item">
+                    <div class="name" data-card-tab="right">Правая сторона</div>
                     <div class="btns">
                       <button type="button" class="btn btn_fullround">
                         Очистить
@@ -316,11 +316,11 @@
                 <div class="content">
                   <!-- ЛЕВАЯ СТОРОНА -->
                   <div
-                    class="item js-tabs-content active"
-                    data-tab-content="left"
+                    class="item js-card-tabs-content active"
+                    data-card-tab-content="left"
                   >
                     <!-- внутрненние табы -->
-                    <div class="inner-tabs">
+                    <div class="inner-tabs js-tabs">
                       <div class="item active" data-tab="tab1_1">Анамнез</div>
                       <div class="item" data-tab="tab1_2">Диагностика</div>
                       <div class="item" data-tab="tab1_3">Лечение</div>
@@ -337,14 +337,19 @@
                             <div class="name">Параметр 1 [Левое]</div>
 
                             <div class="icons">
-                              <a href="javascript:;">
+                              <a href="javascript:;" data-target="video">
                                 <svg>
                                   <use
                                     xlink:href="img/icons/sprite.svg#handbook-camera"
                                   ></use>
                                 </svg>
+
+                                <div class="popup">
+                                  <div class="name">Видео</div>
+                                  <p>Название видеофайла</p>
+                                </div>
                               </a>
-                              <a href="javascript:;">
+                              <a href="javascript:;" data-target="text">
                                 <svg>
                                   <use
                                     xlink:href="img/icons/sprite.svg#handbook-state"
@@ -411,14 +416,14 @@
                             <div class="name">Параметр 2 [Левое]</div>
 
                             <div class="icons">
-                              <a href="javascript:;">
+                              <a href="javascript:;" data-target="video">
                                 <svg>
                                   <use
                                     xlink:href="img/icons/sprite.svg#handbook-camera"
                                   ></use>
                                 </svg>
                               </a>
-                              <a href="javascript:;">
+                              <a href="javascript:;" data-target="text">
                                 <svg>
                                   <use
                                     xlink:href="img/icons/sprite.svg#handbook-state"
@@ -814,16 +819,12 @@
                   <!-- КОНЕЦ ЛЕВАЯ СТОРОНА -->
 
                   <!-- ПРАВАЯ СТОРОНА -->
-                  <div class="item js-tabs-content" data-tab-content="right">
+                  <div
+                    class="item js-card-tabs-content"
+                    data-card-tab-content="right"
+                  >
                     <!-- внутрненние табы -->
-                    <div class="inner-tabs">
-                      <div class="item active" data-tab="tab1">Анамнез</div>
-                      <div class="item" data-tab="tab2">Диагностика</div>
-                      <div class="item" data-tab="tab3">Лечение</div>
-                    </div>
-
-                    <!-- внутрненние табы -->
-                    <div class="inner-tabs">
+                    <div class="inner-tabs js-tabs">
                       <div class="item active" data-tab="tab2_1">Анамнез</div>
                       <div class="item" data-tab="tab2_2">Диагностика</div>
                       <div class="item" data-tab="tab2_3">Лечение</div>
@@ -837,7 +838,7 @@
                       >
                         <div class="block">
                           <div class="head">
-                            <div class="name">Параметр 1 [Левое]</div>
+                            <div class="name">Параметр 1 [Правое]</div>
 
                             <div class="icons">
                               <a href="javascript:;">
@@ -1428,6 +1429,99 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal" data-modal="video">
+      <div class="modal__wrap">
+        <div class="container wide">
+          <div class="head">
+            <h3 class="name">Видео</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <iframe
+              width="100%"
+              height="500"
+              src="https://www.youtube.com/embed/dl16e_mG6hg"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+            <div class="wysiwyg">
+              <p>
+                У каждого параметра может быть добавлен в качестве подсказок
+                видео-материал
+              </p>
+            </div>
+
+            <!-- Кнопки обернул в класс form, чтобы не городить новые стили -->
+            <div class="form">
+              <div class="form__footer">
+                <button
+                  type="button"
+                  class="btn btn_green btn_fullround js-modal-close"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-modal="text">
+      <div class="modal__wrap">
+        <div class="container wide">
+          <div class="head">
+            <h3 class="name">Текст</h3>
+
+            <button type="button" class="close js-modal-close">
+              <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="content">
+            <div class="wysiwyg">
+              <p>
+                Рядом с полем добавлен чекбокс «Переместить в заключение». В
+                случае, если в поле введены какие-либо данные, то чекбокс
+                автоматически активируется, но у пользователя есть возможность
+                его отключить. Соответственно, если чекбокс установлен, то
+                содержимое поля переносится в заключение.
+              </p>
+              <p>
+                <img src="./img/intro.jpg" alt="" />
+              </p>
+              <p>
+                У каждого параметра могут быть добавлены в качестве подсказок
+                видео-материал (может быть несколько), документ (может быть
+                несколько) и/или текстовое описание.
+              </p>
+            </div>
+
+            <!-- Кнопки обернул в класс form, чтобы не городить новые стили -->
+            <div class="form">
+              <div class="form__footer">
+                <button
+                  type="button"
+                  class="btn btn_green btn_fullround js-modal-close"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="modal" data-modal="choose-templ">
       <div class="modal__wrap">

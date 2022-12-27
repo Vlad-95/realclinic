@@ -223,6 +223,49 @@
                     border: 2px solid @green;
                     border-radius: 100px;
                     background-color: @white;
+                    position: relative;
+
+                    &:hover {
+                      .popup {
+                        visibility: visible;
+                        opacity: 1;
+                      }
+                    }
+
+                    .popup {
+                      position: absolute;
+                      right: -20px;
+                      bottom: 45px;
+                      background-color: @white;
+                      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+                      width: 360px;
+                      padding: 40px;
+                      visibility: hidden;
+                      opacity: 0;
+                      transition: 0.3s;
+
+                      &:after {
+                        content: '';
+                        position: absolute;
+                        right: 16px;
+                        bottom: -40px;
+                        border: 20px solid transparent;
+                        border-top: 20px solid @white;
+                      }
+
+                      .name {
+                        font-size: 16px;
+                        font-weight: 700;
+                        width: 100%;
+                        margin: 0;
+                      }
+
+                      p {
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 2;
+                      }
+                    }
 
                     &:not(:last-of-type) {
                       margin-right: 5px;
@@ -397,6 +440,22 @@
                     font-size: 20px;
                   }
 
+                  .icons {
+                    a {
+                      .popup {
+                        padding: 30px;
+
+                        .name {
+                          font-size: 15px;
+                        }
+
+                        p {
+                          font-size: 12px;
+                        }
+                      }
+                    }
+                  }
+
                   .checkbox {
                     span {
                       font-size: 12px;
@@ -485,6 +544,12 @@
                     width: 50%;
                     margin-left: 0;
                     margin-bottom: 10px;
+
+                    a {
+                      .popup {
+                        display: none;
+                      }
+                    }
                   }
 
                   .checkbox {

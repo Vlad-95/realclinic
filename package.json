@@ -16,6 +16,7 @@
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
+    "air-datepicker": "^3.3.3",
     "autoprefixer": "^10.4.5",
     "autosize": "^5.0.2",
     "babel-loader": "^8.2.5",
@@ -38,5 +39,6 @@
     "postcss-preset-env": "^7.4.4",
     "webpack": "^5.72.0",
     "webpack-stream": "^7.0.0"
-  }
+  },
+  "dependencies": {}
 }

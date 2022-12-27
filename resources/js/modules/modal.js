@@ -24,11 +24,11 @@ const modal = () => {
       const siblingsTabContent = currentTabContent.siblings('.js-tabs-content');
 
       $(`[data-tab=${targetTab}]`)
-        .addClass('active')
+        .fadeIn('active')
         .siblings('[data-tab]')
         .removeClass('active');
-      siblingsTabContent.removeClass('active');
-      currentTabContent.addClass('active');
+      siblingsTabContent.hide();
+      currentTabContent.fadeIn();
     }
   });
 

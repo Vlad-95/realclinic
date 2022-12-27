@@ -651,7 +651,11 @@
           </div>
 
           <div class="research-one__footer">
-            <button type="submit" class="btn btn_green btn_fullround share">
+            <button
+              type="submit"
+              data-target="share"
+              class="btn btn_green btn_fullround share"
+            >
               Поделиться
               <svg>
                 <use xlink:href="img/icons/sprite.svg#share"></use>
@@ -716,11 +720,11 @@
       </div>
     </footer>
 
-    <div class="modal" data-modal="new-export">
+    <div class="modal" data-modal="share">
       <div class="modal__wrap">
         <div class="container">
           <div class="head">
-            <h3 class="name">Новые параметры экспорта</h3>
+            <h3 class="name">Поделиться шаблоном исследования</h3>
 
             <button type="button" class="close js-modal-close">
               <svg>
