@@ -1,6 +1,7 @@
 .research {
   &__list {
     padding: 11px 0 58px;
+    min-height: calc(100vh - 549px);
 
     .item {
       .row-align-center-mixin();
@@ -65,6 +66,8 @@
 @media screen and (max-width: 1200px) {
   .research {
     &__list {
+      min-height: calc(100vh - 449px);
+
       .item {
         .name {
           font-size: 15px;
@@ -77,6 +80,7 @@
 @media screen and (max-width: 992px) {
   .research {
     &__list {
+      min-height: auto;
       .item {
         .name {
           font-size: 12px;

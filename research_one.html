@@ -733,24 +733,32 @@
             </button>
           </div>
           <div class="content">
-            <form action="" class="form">
+            <form action="" class="form form_share">
               <div class="form__item">
-                <span class="name">Название параметров экспорта *</span>
                 <label class="label">
-                  <input type="text" class="input" />
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="Введите имя пользователя"
+                  />
                 </label>
+                <button
+                  type="submit"
+                  class="btn btn_green btn_fullround submit"
+                >
+                  Поделиться
+                </button>
               </div>
 
               <div class="form__footer">
-                <button type="submit" class="btn btn_orange btn_fullround">
-                  Сохранить
-                </button>
-
                 <button
                   type="button"
-                  class="btn btn_green btn_fullround js-modal-close"
+                  class="btn btn_orange btn_fullround copy js-copy"
                 >
-                  Отмена
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#chain"></use>
+                  </svg>
+                  Копировать ссылку
                 </button>
               </div>
             </form>

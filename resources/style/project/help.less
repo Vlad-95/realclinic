@@ -1,6 +1,7 @@
 .help {
   &__list {
     padding: 10px 0 40px;
+    min-height: calc(100vh - 549px);
 
     .item {
       background-color: fade(@lightBlue, 10%);
@@ -56,6 +57,7 @@
 @media screen and (max-width: 1200px) {
   .help {
     &__list {
+      min-height: calc(100vh - 449px);
       .item {
         &__head {
           .name {
@@ -63,6 +65,14 @@
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .help {
+    &__list {
+      min-height: auto;
     }
   }
 }

@@ -97,8 +97,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var core_js_modules_es_date_to_string_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.date.to-string.js */ "./node_modules/core-js/modules/es.date.to-string.js");
 /* harmony import */ var core_js_modules_es_date_to_string_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_date_to_string_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! air-datepicker */ "./node_modules/air-datepicker/index.es.js");
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! air-datepicker */ "./node_modules/air-datepicker/index.es.js");
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
 
 
 
@@ -108,11 +111,30 @@ __webpack_require__.r(__webpack_exports__);
 var examination = function examination() {
   if ($('input.js-date').length) {
     document.querySelectorAll('.js-date').forEach(function (item) {
-      var calendar = new air_datepicker__WEBPACK_IMPORTED_MODULE_4__["default"](item, {
+      var calendar = new air_datepicker__WEBPACK_IMPORTED_MODULE_5__["default"](item, {
         autoClose: true,
         isMobile: $(window).width() < 769 ? true : false,
         minDate: new Date()
       });
+    });
+  }
+
+  if ($('.examination__patient').length) {
+    //редактирование основных данных
+    $('.edit').on('click', function () {
+      //находим форму в этом же блоке
+      var block = $(this).closest('.block');
+      var form = block.find('.info');
+      var saveBtn = block.find('.js-save-info');
+      form.find('input').removeAttr('readonly');
+      saveBtn.addClass('show');
+    });
+    $('.js-save-info').on('click', function () {
+      var block = $(this).closest('.block');
+      var form = block.find('.info');
+      var saveBtn = $(this);
+      form.find('input').attr('readonly', true);
+      saveBtn.removeClass('show');
     });
   }
 };
@@ -312,6 +334,32 @@ var preview = function preview() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (preview);
+
+/***/ }),
+
+/***/ "./resources/js/modules/research.js":
+/*!******************************************!*\
+  !*** ./resources/js/modules/research.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+var research = function research() {
+  // клик по кнопке копирования ссылки
+  if ($('.form_share').length) {
+    var copyBtn = $('.form_share .btn.js-copy');
+    copyBtn.on('click', function () {
+      $(this).html("\n        <svg>\n          <use xlink:href=\"img/icons/sprite.svg#chain\"></use>\n        </svg>\n        \u0421\u043A\u043E\u043F\u0438\u0440\u043E\u0432\u0430\u043D\u043E  \n      ");
+    });
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (research);
 
 /***/ }),
 
@@ -15504,7 +15552,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/accordion */ "./resources/js/modules/accordion.js");
 /* harmony import */ var _modules_preview__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/preview */ "./resources/js/modules/preview.js");
 /* harmony import */ var _modules_examination__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/examination */ "./resources/js/modules/examination.js");
+/* harmony import */ var _modules_research__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/research */ "./resources/js/modules/research.js");
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
 
 
 
@@ -15524,6 +15574,7 @@ $(document).ready(function () {
   (0,_modules_accordion__WEBPACK_IMPORTED_MODULE_7__["default"])();
   (0,_modules_preview__WEBPACK_IMPORTED_MODULE_8__["default"])();
   (0,_modules_examination__WEBPACK_IMPORTED_MODULE_9__["default"])();
+  (0,_modules_research__WEBPACK_IMPORTED_MODULE_10__["default"])();
 });
 })();
 

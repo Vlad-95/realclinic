@@ -267,6 +267,10 @@
       font-weight: 500;
       padding: 12px 18px;
     }
+
+    &.center {
+      .row-justify-center-mixin();
+    }
   }
 
   &_cabinet {
@@ -286,6 +290,38 @@
       border: none;
       padding: 0;
       padding-left: 300px;
+    }
+  }
+
+  &_share {
+    .form__item {
+      position: relative;
+
+      .input {
+        padding: 23px 15px;
+        padding-right: 120px;
+        border-radius: 100px;
+      }
+    }
+
+    .btn {
+      &.submit {
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        padding: 11px 19px 10px;
+      }
+
+      &.copy {
+        padding: 6px 18px;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          vertical-align: middle;
+          margin-right: 6px;
+        }
+      }
     }
   }
 }
@@ -372,6 +408,32 @@
 
       .form__footer {
         padding-left: 0;
+      }
+    }
+
+    &_share {
+      .form__item {
+        .input {
+          padding: 15px;
+          padding-right: 100px;
+        }
+      }
+
+      .btn {
+        &.submit {
+          font-size: 12px;
+          padding: 8px 10px;
+        }
+
+        &.copy {
+          padding: 6px 12px;
+          font-size: 12px;
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
       }
     }
   }

@@ -9,6 +9,7 @@ import tabs from './modules/tabs';
 import accordion from './modules/accordion';
 import preview from './modules/preview';
 import examintaion from './modules/examination';
+import research from './modules/research';
 
 $(document).ready(function () {
   mainCards();
@@ -19,4 +20,5 @@ $(document).ready(function () {
   accordion();
   preview();
   examintaion();
+  research();
 });

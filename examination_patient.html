@@ -112,6 +112,12 @@
               <div class="block__head">
                 <div class="name">Данные пациента</div>
                 <div class="icons">
+                  <div class="save js-save-info">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#tick"></use>
+                    </svg>
+                  </div>
+
                   <div class="edit">
                     <svg>
                       <use xlink:href="img/icons/sprite.svg#edit"></use>
@@ -126,20 +132,26 @@
                 </div>
               </div>
               <div class="block__content js-accordion-content">
-                <div class="info">
+                <form class="info">
                   <div class="row">
                     <div class="key">Возраст</div>
-                    <div class="value">67 лет</div>
+                    <div class="value">
+                      <input type="text" readonly value="67 лет" />
+                    </div>
                   </div>
                   <div class="row">
                     <div class="key">Пол</div>
-                    <div class="value">Мужской</div>
+                    <div class="value">
+                      <input type="text" readonly value="Мужской" />
+                    </div>
                   </div>
                   <div class="row">
                     <div class="key">Профессия</div>
-                    <div class="value">Инженер-технолог</div>
+                    <div class="value">
+                      <input type="text" readonly value="Инженер-технолог" />
+                    </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>

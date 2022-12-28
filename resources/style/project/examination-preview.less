@@ -127,6 +127,18 @@
                   transition: 0.3s;
                   overflow: auto !important;
 
+                  &::-webkit-scrollbar {
+                    width: 6px;
+                  }
+
+                  &::-webkit-scrollbar-track {
+                    background: @lightGrey;
+                  }
+
+                  &::-webkit-scrollbar-thumb {
+                    background-color: @mdGrey;
+                    border-radius: 20px;
+                  }
                   &:read-only {
                     padding: 0;
                     padding-left: 15px;

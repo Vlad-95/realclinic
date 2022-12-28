@@ -57,6 +57,11 @@
   .content {
     padding: 40px;
     padding-bottom: 20px;
+
+    iframe {
+      height: 500px;
+      margin-bottom: 10px;
+    }
   }
 
   .tabs {
@@ -167,7 +172,14 @@
 
       p {
         font-size: 20px;
+        line-height: 1.5;
         margin: 0;
+
+        &.small {
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 2;
+        }
       }
     }
   }
@@ -208,6 +220,11 @@
 
 @media screen and (max-width: 1200px) {
   .modal {
+    .content {
+      iframe {
+        height: 350px;
+      }
+    }
     .text-with-icon {
       padding: 0;
       .icon {
@@ -223,6 +240,10 @@
 
         p {
           font-size: 15px;
+
+          &.small {
+            line-height: 1.5;
+          }
         }
       }
     }
@@ -277,7 +298,32 @@
       .text {
         p {
           font-size: 12px;
+
+          &.small {
+            font-size: 12px;
+          }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .modal {
+    .content {
+      iframe {
+        height: 300px;
+      }
+    }
+    .text-with-icon {
+      .column-align-start-mixin();
+
+      .icon {
+        margin-bottom: 20px;
+      }
+
+      .text {
+        width: 100%;
       }
     }
   }
